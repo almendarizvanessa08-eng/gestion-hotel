@@ -240,3 +240,95 @@
                 </tbody>
             </table>
         </section>
+                <!-- FORMULARIO PARA REGISTRAR UN HUÉSPED -->
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <h3 class="text-xl font-bold">Registrar nuevo huésped</h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Ingresa los datos del huésped para completar su registro.
+            </p>
+
+            <form class="mt-5 grid gap-4 sm:grid-cols-2">
+
+                <!-- CAMPO PARA EL NOMBRE DEL HUÉSPED -->
+                <div>
+                    <label for="nombre" class="block text-sm font-medium">Nombre completo</label>
+                    <input
+                        id="nombre"
+                        type="text"
+                        placeholder="Nombre del huésped"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- CAMPO PARA EL DOCUMENTO DE IDENTIDAD -->
+                <div>
+                    <label for="documento" class="block text-sm font-medium">Documento de identidad</label>
+                    <input
+                        id="documento"
+                        type="text"
+                        placeholder="Número de identificación"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- CAMPO PARA EL TELÉFONO -->
+                <div>
+                    <label for="telefono" class="block text-sm font-medium">Teléfono</label>
+                    <input
+                        id="telefono"
+                        type="tel"
+                        placeholder="Número de teléfono"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- CAMPO PARA EL CORREO ELECTRÓNICO -->
+                <div>
+                    <label for="correo" class="block text-sm font-medium">Correo electrónico</label>
+                    <input
+                        id="correo"
+                        type="email"
+                        placeholder="correo@ejemplo.com"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- SELECCIÓN DE HABITACIÓN -->
+                <div>
+                    <label for="habitacion" class="block text-sm font-medium">Habitación</label>
+                    <select
+                        id="habitacion"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="">Seleccionar habitación</option>
+                        <option value="101">Habitación 101</option>
+                        <option value="205">Habitación 205</option>
+                        <option value="310">Habitación 310</option>
+                    </select>
+                </div>
+
+                <!-- SELECCIÓN DE FECHA DE ENTRADA -->
+                <div>
+                    <label for="fecha" class="block text-sm font-medium">Fecha de entrada</label>
+                    <input
+                        id="fecha"
+                        type="date"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- BOTÓN PARA GUARDAR EL REGISTRO -->
+                <div class="text-center sm:col-span-2 sm:text-right">
+                    <button
+                        type="button"
+                        class="rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                        Guardar huésped
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- PIE DE PÁGINA DEL SISTEMA -->
+        <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">
+            <p>Hotel Aurea | Sistema de administración y recepción</p>
+            <p class="mt-1">Panel de control de huéspedes y habitaciones</p>
+        </footer>
+
+    </main>
+</body>
+</html>

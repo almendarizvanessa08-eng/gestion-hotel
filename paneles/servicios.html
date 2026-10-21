@@ -202,3 +202,153 @@
 
             </div>
         </section>
+
+                <!-- TABLA DE SOLICITUDES DE SERVICIOS -->
+        <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <div class="p-5">
+                <h3 class="text-xl font-bold">Solicitudes de huéspedes</h3>
+                <p class="text-sm text-gray-500">Seguimiento de servicios solicitados.</p>
+            </div>
+
+            <table class="w-full text-left text-sm">
+                <thead class="border-y border-gray-200 bg-gray-50">
+                    <tr>
+                        <th class="p-4 font-medium">Huésped</th>
+                        <th class="p-4 font-medium">Habitación</th>
+                        <th class="p-4 font-medium">Servicio</th>
+                        <th class="p-4 font-medium">Estado</th>
+                        <th class="p-4 font-medium">Acción</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+
+                    <!-- SOLICITUD PENDIENTE -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">Carlos Ramírez</td>
+                        <td class="p-4">205</td>
+                        <td class="p-4">Servicio a habitación</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-800">Pendiente</span>
+                        </td>
+                        <td class="p-4">
+                            <button class="text-[#1E3A8A] hover:underline">Atender</button>
+                        </td>
+                    </tr>
+
+                    <!-- SOLICITUD EN PROCESO -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">María López</td>
+                        <td class="p-4">101</td>
+                        <td class="p-4">Lavandería</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-blue-800">En proceso</span>
+                        </td>
+                        <td class="p-4">
+                            <button class="text-[#1E3A8A] hover:underline">Consultar</button>
+                        </td>
+                    </tr>
+
+                    <!-- SOLICITUD COMPLETADA -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">Juan Torres</td>
+                        <td class="p-4">310</td>
+                        <td class="p-4">Desayuno buffet</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-green-100 px-3 py-1 text-green-700">Completado</span>
+                        </td>
+                        <td class="p-4">
+                            <button class="text-[#1E3A8A] hover:underline">Consultar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+        <!-- FORMULARIO PARA REGISTRAR UN NUEVO SERVICIO -->
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <h3 class="text-xl font-bold">Registrar nuevo servicio</h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Agrega un servicio al catálogo del hotel.
+            </p>
+
+            <form class="mt-5 grid gap-4 sm:grid-cols-2">
+
+                <!-- NOMBRE DEL SERVICIO -->
+                <div>
+                    <label for="nombre" class="block text-sm font-medium">Nombre del servicio</label>
+                    <input
+                        id="nombre"
+                        type="text"
+                        placeholder="Ej. Servicio de lavandería"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- CATEGORÍA DEL SERVICIO -->
+                <div>
+                    <label for="categoria" class="block text-sm font-medium">Categoría</label>
+                    <select
+                        id="categoria"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="">Seleccionar categoría</option>
+                        <option>Alimentos</option>
+                        <option>Habitación</option>
+                        <option>Bienestar</option>
+                        <option>Transporte</option>
+                        <option>Otros</option>
+                    </select>
+                </div>
+
+                <!-- PRECIO DEL SERVICIO -->
+                <div>
+                    <label for="precio" class="block text-sm font-medium">Precio en pesos</label>
+                    <input
+                        id="precio"
+                        type="number"
+                        min="0"
+                        placeholder="0.00"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- DISPONIBILIDAD DEL SERVICIO -->
+                <div>
+                    <label for="estado" class="block text-sm font-medium">Disponibilidad</label>
+                    <select
+                        id="estado"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option>Disponible</option>
+                        <option>No disponible</option>
+                    </select>
+                </div>
+
+                <!-- DESCRIPCIÓN DEL SERVICIO -->
+                <div class="sm:col-span-2">
+                    <label for="descripcion" class="block text-sm font-medium">Descripción</label>
+                    <textarea
+                        id="descripcion"
+                        rows="3"
+                        placeholder="Describe brevemente el servicio..."
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none"></textarea>
+                </div>
+
+                <!-- BOTÓN PARA REGISTRAR EL SERVICIO -->
+                <div class="text-center sm:col-span-2 sm:text-right">
+                    <button
+                        type="button"
+                        class="rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                        Guardar servicio
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- PIE DE PÁGINA DEL SISTEMA -->
+        <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">
+            <p>Hotel Aurea | Sistema de gestión de servicios</p>
+            <p class="mt-1">Administración y atención a huéspedes</p>
+        </footer>
+
+    </main>
+</body>
+</html>

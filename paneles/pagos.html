@@ -60,3 +60,110 @@
                 <p class="text-gray-500 text-sm mt-2">Devoluciones realizadas</p>
             </div>
         </section>
+                <!-- FILTROS DE BUSQUEDA -->
+        <section class="bg-white p-6 rounded-xl shadow mb-8">
+            <h3 class="text-xl font-bold text-[#0B1B34] mb-5">Buscar pagos</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Nombre del huésped</label>
+                    <input type="text" placeholder="Buscar huésped..." class="w-full border rounded-lg p-3 outline-none focus:ring-2 focus:ring-[#B48A5A]">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Método de pago</label>
+                    <select class="w-full border rounded-lg p-3 bg-white">
+                        <option>Todos los métodos</option>
+                        <option>Tarjeta de crédito</option>
+                        <option>Tarjeta de débito</option>
+                        <option>Efectivo</option>
+                        <option>Transferencia</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Estado del pago</label>
+                    <select class="w-full border rounded-lg p-3 bg-white">
+                        <option>Todos los estados</option>
+                        <option>Completado</option>
+                        <option>Pendiente</option>
+                        <option>Reembolsado</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Fecha del pago</label>
+                    <input type="date" class="w-full border rounded-lg p-3">
+                </div>
+            </div>
+            <div class="flex justify-end gap-3 mt-5">
+                <button class="border border-gray-300 px-5 py-2 rounded-lg hover:bg-gray-100">Limpiar</button>
+                <button class="bg-[#1E3A8A] text-white px-5 py-2 rounded-lg hover:bg-[#0B1B34]">Buscar</button>
+            </div>
+        </section>
+        <!-- HISTORIAL DE PAGOS -->
+        <section class="bg-white p-6 rounded-xl shadow mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 mb-5">
+                <div>
+                    <h3 class="text-xl font-bold text-[#0B1B34]">Historial de pagos</h3>
+                    <p class="text-gray-500 text-sm">Registro de las transacciones realizadas.</p>
+                </div>
+                <button class="border border-[#B48A5A] text-[#987044] px-4 py-2 rounded-lg hover:bg-[#E7E2D9]">
+                    Exportar historial
+                </button>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left">
+                    <thead class="bg-[#0B1B34] text-white">
+                        <tr>
+                            <th class="p-3">Folio</th>
+                            <th class="p-3">Huésped</th>
+                            <th class="p-3">Reservación</th>
+                            <th class="p-3">Fecha</th>
+                            <th class="p-3">Método</th>
+                            <th class="p-3">Importe</th>
+                            <th class="p-3">Estado</th>
+                            <th class="p-3">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-3 font-semibold">PAG-1025</td>
+                            <td class="p-3">Carlos Mendoza</td>
+                            <td class="p-3">RES-1045</td>
+                            <td class="p-3">02/11/2026</td>
+                            <td class="p-3">Tarjeta</td>
+                            <td class="p-3 font-semibold">$3,500</td>
+                            <td class="p-3"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">Completado</span></td>
+                            <td class="p-3"><button class="text-[#1E3A8A] hover:underline">Consultar</button></td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-3 font-semibold">PAG-1024</td>
+                            <td class="p-3">Mariana López</td>
+                            <td class="p-3">RES-1046</td>
+                            <td class="p-3">02/11/2026</td>
+                            <td class="p-3">Efectivo</td>
+                            <td class="p-3 font-semibold">$2,800</td>
+                            <td class="p-3"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">Completado</span></td>
+                            <td class="p-3"><button class="text-[#1E3A8A] hover:underline">Consultar</button></td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-3 font-semibold">PAG-1023</td>
+                            <td class="p-3">Roberto Sánchez</td>
+                            <td class="p-3">RES-1047</td>
+                            <td class="p-3">01/11/2026</td>
+                            <td class="p-3">Transferencia</td>
+                            <td class="p-3 font-semibold">$4,200</td>
+                            <td class="p-3"><span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">Pendiente</span></td>
+                            <td class="p-3"><button class="text-[#1E3A8A] hover:underline">Consultar</button></td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-3 font-semibold">PAG-1022</td>
+                            <td class="p-3">Andrea Torres</td>
+                            <td class="p-3">RES-1048</td>
+                            <td class="p-3">31/10/2026</td>
+                            <td class="p-3">Tarjeta</td>
+                            <td class="p-3 font-semibold">$1,900</td>
+                            <td class="p-3"><span class="bg-red-100 text-red-700 px-3 py-1 rounded-full">Reembolsado</span></td>
+                            <td class="p-3"><button class="text-[#1E3A8A] hover:underline">Consultar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>

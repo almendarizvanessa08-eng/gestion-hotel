@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pagos | Hotel Aurea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
-</body>
-</html>
+<body class="bg-[#E7E2D9] min-h-screen">
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="bg-[#0B1B34] text-white px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+            <h1 class="text-2xl font-bold tracking-wider">HOTEL AUREA</h1>
+            <p class="text-[#A1B2D6] text-sm">Sistema de administración</p>
+        </div>
+        <nav class="flex flex-wrap justify-center gap-5 text-sm">
+            <a href="#" class="hover:text-[#B48A5A]">Recepción</a>
+            <a href="#" class="hover:text-[#B48A5A]">Reservaciones</a>
+            <a href="#" class="hover:text-[#B48A5A]">Habitaciones</a>
+            <a href="#" class="hover:text-[#B48A5A]">Clientes</a>
+            <a href="#" class="hover:text-[#B48A5A]">Servicios</a>
+            <a href="#" class="text-[#B48A5A] font-semibold">Pagos</a>
+            <a href="#" class="hover:text-[#B48A5A]">Reportes</a>
+        </nav>
+        <div class="bg-[#1E3A8A] px-4 py-2 rounded-lg text-sm">
+            Administrador
+        </div>
+    </header>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="max-w-7xl mx-auto p-6">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 mb-6">
+            <div>
+                <h2 class="text-3xl font-bold text-[#0B1B34]">Gestión de pagos</h2>
+                <p class="text-gray-600 mt-1">Consulta y administra los pagos de los huéspedes.</p>
+            </div>
+            <button class="bg-[#B48A5A] text-white px-5 py-3 rounded-lg hover:bg-[#987044]">
+                + Registrar pago
+            </button>
+        </div>
+        <!-- INDICADORES DE PAGOS -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+            <div class="bg-white p-5 rounded-xl shadow">
+                <p class="text-gray-500 text-sm">Ingresos del mes</p>
+                <h3 class="text-2xl font-bold text-[#0B1B34] mt-2">$85,400</h3>
+                <p class="text-green-600 text-sm mt-2">Ingresos registrados</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow">
+                <p class="text-gray-500 text-sm">Pagos completados</p>
+                <h3 class="text-2xl font-bold text-green-600 mt-2">86</h3>
+                <p class="text-gray-500 text-sm mt-2">Transacciones exitosas</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow">
+                <p class="text-gray-500 text-sm">Pagos pendientes</p>
+                <h3 class="text-2xl font-bold text-yellow-600 mt-2">18</h3>
+                <p class="text-gray-500 text-sm mt-2">Por cobrar</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow">
+                <p class="text-gray-500 text-sm">Pagos reembolsados</p>
+                <h3 class="text-2xl font-bold text-red-600 mt-2">5</h3>
+                <p class="text-gray-500 text-sm mt-2">Devoluciones realizadas</p>
+            </div>
+        </section>

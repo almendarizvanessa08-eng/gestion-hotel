@@ -167,3 +167,79 @@
                 </table>
             </div>
         </section>
+                <!-- REGISTRO DE NUEVO PAGO -->
+        <section class="bg-white p-6 rounded-xl shadow mb-8">
+            <h3 class="text-xl font-bold text-[#0B1B34] mb-2">Registrar nuevo pago</h3>
+            <p class="text-gray-500 text-sm mb-5">Captura la información del pago realizado por el huésped.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Nombre del huésped</label>
+                    <input type="text" placeholder="Nombre completo" class="w-full border rounded-lg p-3">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Folio de reservación</label>
+                    <input type="text" placeholder="Ej. RES-1049" class="w-full border rounded-lg p-3">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Importe del pago</label>
+                    <input type="number" placeholder="$0.00" class="w-full border rounded-lg p-3">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Método de pago</label>
+                    <select class="w-full border rounded-lg p-3 bg-white">
+                        <option>Seleccionar método</option>
+                        <option>Efectivo</option>
+                        <option>Tarjeta de crédito</option>
+                        <option>Tarjeta de débito</option>
+                        <option>Transferencia bancaria</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Fecha del pago</label>
+                    <input type="date" class="w-full border rounded-lg p-3">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Estado</label>
+                    <select class="w-full border rounded-lg p-3 bg-white">
+                        <option>Completado</option>
+                        <option>Pendiente</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2 lg:col-span-3">
+                    <label class="block text-sm font-semibold mb-2">Observaciones</label>
+                    <textarea rows="3" placeholder="Agregar detalles del pago..." class="w-full border rounded-lg p-3"></textarea>
+                </div>
+            </div>
+            <div class="flex justify-end gap-3 mt-5">
+                <button class="border border-gray-300 px-5 py-2 rounded-lg hover:bg-gray-100">Cancelar</button>
+                <button class="bg-[#1E3A8A] text-white px-6 py-2 rounded-lg hover:bg-[#0B1B34]">Guardar pago</button>
+            </div>
+        </section>
+        <!-- RESUMEN DE METODOS DE PAGO -->
+        <section class="bg-white p-6 rounded-xl shadow mb-8">
+            <h3 class="text-xl font-bold text-[#0B1B34] mb-5">Resumen por método de pago</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="border rounded-lg p-5">
+                    <p class="text-gray-500 text-sm">Tarjetas bancarias</p>
+                    <h4 class="text-2xl font-bold text-[#1E3A8A] mt-2">$48,500</h4>
+                    <p class="text-sm text-gray-500 mt-2">57% de los ingresos</p>
+                </div>
+                <div class="border rounded-lg p-5">
+                    <p class="text-gray-500 text-sm">Efectivo</p>
+                    <h4 class="text-2xl font-bold text-[#1E3A8A] mt-2">$22,400</h4>
+                    <p class="text-sm text-gray-500 mt-2">26% de los ingresos</p>
+                </div>
+                <div class="border rounded-lg p-5">
+                    <p class="text-gray-500 text-sm">Transferencias</p>
+                    <h4 class="text-2xl font-bold text-[#1E3A8A] mt-2">$14,500</h4>
+                    <p class="text-sm text-gray-500 mt-2">17% de los ingresos</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- PIE DE PAGINA -->
+    <footer class="bg-[#0B1B34] text-[#A1B2D6] text-center py-5 text-sm">
+        © 2026 Hotel Aurea. Sistema de administración.
+    </footer>
+</body>
+</html>

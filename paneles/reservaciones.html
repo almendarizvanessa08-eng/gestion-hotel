@@ -229,3 +229,219 @@
                 </tbody>
             </table>
         </section>
+                <!-- FORMULARIO PARA REGISTRAR UNA NUEVA RESERVACIÓN -->
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <h3 class="text-xl font-bold">Registrar nueva reservación</h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Captura los datos del huésped y los detalles de su estancia.
+            </p>
+
+            <form class="mt-5 grid gap-4 sm:grid-cols-2">
+
+                <!-- NOMBRE DEL HUÉSPED -->
+                <div>
+                    <label for="nombre" class="block text-sm font-medium">Nombre completo</label>
+                    <input id="nombre" type="text" placeholder="Nombre del huésped"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- CORREO DEL HUÉSPED -->
+                <div>
+                    <label for="correo" class="block text-sm font-medium">Correo electrónico</label>
+                    <input id="correo" type="email" placeholder="correo@ejemplo.com"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- TELÉFONO DEL HUÉSPED -->
+                <div>
+                    <label for="telefono" class="block text-sm font-medium">Teléfono</label>
+                    <input id="telefono" type="tel" placeholder="Número de teléfono"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- NÚMERO DE HUÉSPEDES -->
+                <div>
+                    <label for="personas" class="block text-sm font-medium">Número de huéspedes</label>
+                    <input id="personas" type="number" min="1" placeholder="Ej. 2"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- FECHA DE ENTRADA -->
+                <div>
+                    <label for="fechaEntrada" class="block text-sm font-medium">Fecha de entrada</label>
+                    <input id="fechaEntrada" type="date"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- FECHA DE SALIDA -->
+                <div>
+                    <label for="fechaSalida" class="block text-sm font-medium">Fecha de salida</label>
+                    <input id="fechaSalida" type="date"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- SELECCIÓN DE HABITACIÓN -->
+                <div>
+                    <label for="habitacion" class="block text-sm font-medium">Tipo de habitación</label>
+                    <select id="habitacion"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="">Seleccionar habitación</option>
+                        <option>Estándar</option>
+                        <option>Doble</option>
+                        <option>Suite</option>
+                        <option>Familiar</option>
+                    </select>
+                </div>
+
+                <!-- SELECCIÓN DE SERVICIOS ADICIONALES -->
+                <div>
+                    <label for="servicio" class="block text-sm font-medium">Servicio adicional</label>
+                    <select id="servicio"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option>Sin servicio adicional</option>
+                        <option>Desayuno buffet</option>
+                        <option>Estacionamiento</option>
+                        <option>Servicio a habitación</option>
+                    </select>
+                </div>
+
+                <!-- OBSERVACIONES DE LA RESERVACIÓN -->
+                <div class="sm:col-span-2">
+                    <label for="observaciones" class="block text-sm font-medium">Observaciones</label>
+                    <textarea id="observaciones" rows="3" placeholder="Escribe alguna solicitud especial..."
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none"></textarea>
+                </div>
+
+                <!-- BOTÓN PARA REGISTRAR LA RESERVACIÓN -->
+                <div class="text-center sm:col-span-2 sm:text-right">
+                    <button type="button"
+                        class="rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                        Registrar reservación
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- CONTROL DE DISPONIBILIDAD DE HABITACIONES -->
+        <section class="grid gap-6 sm:grid-cols-2">
+
+            <!-- RESUMEN DE DISPONIBILIDAD -->
+            <article class="rounded-xl border border-gray-200 bg-white p-6">
+                <h3 class="text-xl font-bold">Disponibilidad de habitaciones</h3>
+                <p class="mt-1 text-sm text-gray-500">Estado general del alojamiento.</p>
+
+                <div class="mt-5 space-y-4">
+
+                    <!-- HABITACIONES DISPONIBLES -->
+                    <div>
+                        <div class="mb-1 flex justify-between text-sm">
+                            <span>Disponibles</span>
+                            <span class="font-semibold text-green-600">8</span>
+                        </div>
+                        <div class="h-3 rounded-full bg-gray-200">
+                            <div class="h-3 w-[20%] rounded-full bg-green-500"></div>
+                        </div>
+                    </div>
+
+                    <!-- HABITACIONES OCUPADAS -->
+                    <div>
+                        <div class="mb-1 flex justify-between text-sm">
+                            <span>Ocupadas</span>
+                            <span class="font-semibold text-[#1E3A8A]">28</span>
+                        </div>
+                        <div class="h-3 rounded-full bg-gray-200">
+                            <div class="h-3 w-[70%] rounded-full bg-[#1E3A8A]"></div>
+                        </div>
+                    </div>
+
+                    <!-- HABITACIONES BLOQUEADAS -->
+                    <div>
+                        <div class="mb-1 flex justify-between text-sm">
+                            <span>Bloqueadas</span>
+                            <span class="font-semibold text-red-600">4</span>
+                        </div>
+                        <div class="h-3 rounded-full bg-gray-200">
+                            <div class="h-3 w-[10%] rounded-full bg-red-500"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- CONTROL DE TEMPORADAS -->
+            <article class="rounded-xl border border-gray-200 bg-white p-6">
+                <h3 class="text-xl font-bold">Control de temporadas</h3>
+                <p class="mt-1 text-sm text-gray-500">Consulta los periodos y tarifas especiales.</p>
+
+                <div class="mt-4 space-y-3">
+
+                    <!-- TEMPORADA ALTA -->
+                    <div class="flex items-center justify-between rounded-lg bg-[#E7E2D9] p-4">
+                        <div>
+                            <p class="font-semibold">Temporada alta</p>
+                            <p class="text-sm text-gray-500">15 Dic - 05 Ene</p>
+                        </div>
+                        <span class="font-bold text-[#B48A5A]">+25%</span>
+                    </div>
+
+                    <!-- TEMPORADA REGULAR -->
+                    <div class="flex items-center justify-between rounded-lg bg-gray-50 p-4">
+                        <div>
+                            <p class="font-semibold">Temporada regular</p>
+                            <p class="text-sm text-gray-500">06 Ene - 30 Jun</p>
+                        </div>
+                        <span class="font-bold text-[#1E3A8A]">Normal</span>
+                    </div>
+
+                    <!-- TEMPORADA BAJA -->
+                    <div class="flex items-center justify-between rounded-lg bg-gray-50 p-4">
+                        <div>
+                            <p class="font-semibold">Temporada baja</p>
+                            <p class="text-sm text-gray-500">01 Sep - 30 Nov</p>
+                        </div>
+                        <span class="font-bold text-green-600">-15%</span>
+                    </div>
+
+                </div>
+
+                <!-- BOTÓN PARA ADMINISTRAR TEMPORADAS -->
+                <button class="mt-4 w-full rounded-lg border border-[#1E3A8A] px-4 py-2 text-[#1E3A8A] hover:bg-[#1E3A8A] hover:text-white">
+                    Administrar temporadas
+                </button>
+            </article>
+
+        </section>
+
+        <!-- INFORMACIÓN SOBRE COMPROBANTES -->
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+                <div>
+                    <h3 class="text-xl font-bold">Comprobantes de reservación</h3>
+                    <p class="mt-1 text-sm text-gray-500">
+                        Consulta los folios y comprobantes generados para los huéspedes.
+                    </p>
+                </div>
+                <button class="rounded-lg bg-[#B48A5A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                    Consultar comprobantes
+                </button>
+            </div>
+
+            <!-- ÚLTIMO COMPROBANTE GENERADO -->
+            <div class="mt-4 rounded-lg bg-[#E7E2D9] p-4">
+                <p class="text-sm text-gray-500">Último comprobante generado</p>
+                <p class="mt-1 font-bold">RES-1045</p>
+                <p class="text-sm text-gray-600">Carlos Ramírez | Habitación 205</p>
+                <p class="mt-1 text-xs text-gray-500">Estado: Confirmada</p>
+            </div>
+        </section>
+
+        <!-- PIE DE PÁGINA DEL SISTEMA -->
+        <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">
+            <p>Hotel Aurea | Sistema de administración de reservaciones</p>
+            <p class="mt-1">Control de disponibilidad y atención a huéspedes</p>
+        </footer>
+
+    </main>
+</body>
+</html>

@@ -71,3 +71,195 @@
             </article>
 
         </section>
+                <!-- FILTROS PARA GENERAR REPORTES -->
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <h3 class="text-xl font-bold">Consultar reportes</h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Selecciona el periodo y el tipo de información que deseas consultar.
+            </p>
+
+            <form class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+                <!-- FECHA INICIAL DEL REPORTE -->
+                <div>
+                    <label for="fechaInicio" class="block text-sm font-medium">Fecha inicial</label>
+                    <input id="fechaInicio" type="date"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- FECHA FINAL DEL REPORTE -->
+                <div>
+                    <label for="fechaFin" class="block text-sm font-medium">Fecha final</label>
+                    <input id="fechaFin" type="date"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- TIPO DE REPORTE -->
+                <div>
+                    <label for="tipoReporte" class="block text-sm font-medium">Tipo de reporte</label>
+                    <select id="tipoReporte"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option>Todos los reportes</option>
+                        <option>Ingresos</option>
+                        <option>Ocupación</option>
+                        <option>Reservaciones</option>
+                        <option>Servicios</option>
+                        <option>Cancelaciones</option>
+                    </select>
+                </div>
+
+                <!-- PERIODO DEL REPORTE -->
+                <div>
+                    <label for="periodo" class="block text-sm font-medium">Periodo</label>
+                    <select id="periodo"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option>Personalizado</option>
+                        <option>Diario</option>
+                        <option>Semanal</option>
+                        <option>Mensual</option>
+                        <option>Anual</option>
+                    </select>
+                </div>
+
+                <!-- BOTÓN PARA GENERAR EL REPORTE -->
+                <div class="text-center sm:col-span-2 lg:col-span-4 sm:text-right">
+                    <button type="button"
+                        class="rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                        Generar reporte
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- ESTADÍSTICAS DE INGRESOS -->
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
+                <div>
+                    <h3 class="text-xl font-bold">Reporte de ingresos</h3>
+                    <p class="text-sm text-gray-500">Resumen de ingresos por mes.</p>
+                </div>
+                <span class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-700">
+                    Total: $85,400
+                </span>
+            </div>
+
+            <!-- GRÁFICA VISUAL DE INGRESOS MENSUALES -->
+            <div class="mt-6 space-y-4">
+
+                <!-- INGRESOS DE ENERO -->
+                <div>
+                    <div class="mb-1 flex justify-between text-sm">
+                        <span>Enero</span>
+                        <span class="font-semibold">$65,000</span>
+                    </div>
+                    <div class="h-3 rounded-full bg-gray-200">
+                        <div class="h-3 w-[65%] rounded-full bg-[#1E3A8A]"></div>
+                    </div>
+                </div>
+
+                <!-- INGRESOS DE FEBRERO -->
+                <div>
+                    <div class="mb-1 flex justify-between text-sm">
+                        <span>Febrero</span>
+                        <span class="font-semibold">$72,000</span>
+                    </div>
+                    <div class="h-3 rounded-full bg-gray-200">
+                        <div class="h-3 w-[72%] rounded-full bg-[#1E3A8A]"></div>
+                    </div>
+                </div>
+
+                <!-- INGRESOS DE MARZO -->
+                <div>
+                    <div class="mb-1 flex justify-between text-sm">
+                        <span>Marzo</span>
+                        <span class="font-semibold">$85,400</span>
+                    </div>
+                    <div class="h-3 rounded-full bg-gray-200">
+                        <div class="h-3 w-[85%] rounded-full bg-[#B48A5A]"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ESTADÍSTICAS DE OCUPACIÓN Y SERVICIOS -->
+        <section class="grid gap-6 sm:grid-cols-2">
+
+            <!-- REPORTE DE OCUPACIÓN -->
+            <article class="rounded-xl border border-gray-200 bg-white p-6">
+                <h3 class="text-xl font-bold">Ocupación del hotel</h3>
+                <p class="mt-1 text-sm text-gray-500">Distribución de las habitaciones.</p>
+
+                <!-- PORCENTAJES DE OCUPACIÓN -->
+                <div class="mt-5 space-y-4">
+                    <div>
+                        <div class="mb-1 flex justify-between text-sm">
+                            <span>Ocupadas</span>
+                            <span class="font-semibold text-[#1E3A8A]">78%</span>
+                        </div>
+                        <div class="h-3 rounded-full bg-gray-200">
+                            <div class="h-3 w-[78%] rounded-full bg-[#1E3A8A]"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="mb-1 flex justify-between text-sm">
+                            <span>Disponibles</span>
+                            <span class="font-semibold text-green-600">17%</span>
+                        </div>
+                        <div class="h-3 rounded-full bg-gray-200">
+                            <div class="h-3 w-[17%] rounded-full bg-green-500"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="mb-1 flex justify-between text-sm">
+                            <span>Bloqueadas</span>
+                            <span class="font-semibold text-red-600">5%</span>
+                        </div>
+                        <div class="h-3 rounded-full bg-gray-200">
+                            <div class="h-3 w-[5%] rounded-full bg-red-500"></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- REPORTE DE SERVICIOS MÁS SOLICITADOS -->
+            <article class="rounded-xl border border-gray-200 bg-white p-6">
+                <h3 class="text-xl font-bold">Servicios más solicitados</h3>
+                <p class="mt-1 text-sm text-gray-500">Servicios utilizados por los huéspedes.</p>
+
+                <div class="mt-5 space-y-4">
+
+                    <!-- SERVICIO DE DESAYUNO -->
+                    <div class="flex items-center justify-between rounded-lg bg-[#E7E2D9] p-3">
+                        <div>
+                            <p class="font-semibold">Desayuno buffet</p>
+                            <p class="text-xs text-gray-500">Solicitudes registradas</p>
+                        </div>
+                        <span class="font-bold text-[#1E3A8A]">85</span>
+                    </div>
+
+                    <!-- SERVICIO DE LAVANDERÍA -->
+                    <div class="flex items-center justify-between rounded-lg bg-gray-50 p-3">
+                        <div>
+                            <p class="font-semibold">Lavandería</p>
+                            <p class="text-xs text-gray-500">Solicitudes registradas</p>
+                        </div>
+                        <span class="font-bold text-[#1E3A8A]">42</span>
+                    </div>
+
+                    <!-- SERVICIO DE TRANSPORTE -->
+                    <div class="flex items-center justify-between rounded-lg bg-gray-50 p-3">
+                        <div>
+                            <p class="font-semibold">Transporte</p>
+                            <p class="text-xs text-gray-500">Solicitudes registradas</p>
+                        </div>
+                        <span class="font-bold text-[#1E3A8A]">28</span>
+                    </div>
+
+                </div>
+            </article>
+
+        </section>

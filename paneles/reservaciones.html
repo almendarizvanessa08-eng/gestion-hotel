@@ -76,3 +76,156 @@
             </article>
 
         </section>
+                <!-- FILTROS PARA BUSCAR RESERVACIONES -->
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <h3 class="text-xl font-bold">Buscar reservaciones</h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Filtra los registros por huésped, fechas o estado.
+            </p>
+
+            <form class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+                <!-- BÚSQUEDA POR NOMBRE DEL HUÉSPED -->
+                <div>
+                    <label for="huesped" class="block text-sm font-medium">Nombre del huésped</label>
+                    <input id="huesped" type="text" placeholder="Buscar huésped"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- FILTRO POR FECHA DE ENTRADA -->
+                <div>
+                    <label for="entrada" class="block text-sm font-medium">Fecha de entrada</label>
+                    <input id="entrada" type="date"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- FILTRO POR FECHA DE SALIDA -->
+                <div>
+                    <label for="salida" class="block text-sm font-medium">Fecha de salida</label>
+                    <input id="salida" type="date"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <!-- FILTRO POR ESTADO -->
+                <div>
+                    <label for="estado" class="block text-sm font-medium">Estado</label>
+                    <select id="estado"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option>Todos los estados</option>
+                        <option>Confirmada</option>
+                        <option>Pendiente</option>
+                        <option>Cancelada</option>
+                    </select>
+                </div>
+
+                <!-- BOTÓN PARA APLICAR LOS FILTROS -->
+                <div class="text-center sm:col-span-2 lg:col-span-4 sm:text-right">
+                    <button type="button"
+                        class="rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                        Buscar reservaciones
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- TABLA GENERAL DE RESERVACIONES -->
+        <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+
+            <div class="flex flex-col justify-between gap-3 p-5 sm:flex-row sm:items-center">
+                <div>
+                    <h3 class="text-xl font-bold">Listado de reservaciones</h3>
+                    <p class="text-sm text-gray-500">Control de registros y estados actuales.</p>
+                </div>
+                <span class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
+                    124 registros
+                </span>
+            </div>
+
+            <table class="w-full text-left text-sm">
+                <thead class="border-y border-gray-200 bg-gray-50">
+                    <tr>
+                        <th class="p-4 font-medium">Folio</th>
+                        <th class="p-4 font-medium">Huésped</th>
+                        <th class="p-4 font-medium">Habitación</th>
+                        <th class="p-4 font-medium">Entrada</th>
+                        <th class="p-4 font-medium">Salida</th>
+                        <th class="p-4 font-medium">Estado</th>
+                        <th class="p-4 font-medium">Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody class="divide-y divide-gray-100">
+
+                    <!-- PRIMERA RESERVACIÓN CONFIRMADA -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">RES-1045</td>
+                        <td class="p-4">Carlos Ramírez</td>
+                        <td class="p-4">205</td>
+                        <td class="p-4">10 Nov 2026</td>
+                        <td class="p-4">13 Nov 2026</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-green-100 px-3 py-1 text-green-700">Confirmada</span>
+                        </td>
+                        <td class="p-4">
+                            <div class="flex gap-3">
+                                <button class="text-[#1E3A8A] hover:underline">Editar</button>
+                                <button class="text-red-600 hover:underline">Cancelar</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- SEGUNDA RESERVACIÓN PENDIENTE -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">RES-1046</td>
+                        <td class="p-4">María López</td>
+                        <td class="p-4">101</td>
+                        <td class="p-4">15 Nov 2026</td>
+                        <td class="p-4">18 Nov 2026</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-800">Pendiente</span>
+                        </td>
+                        <td class="p-4">
+                            <div class="flex gap-3">
+                                <button class="text-[#1E3A8A] hover:underline">Editar</button>
+                                <button class="text-red-600 hover:underline">Cancelar</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- TERCERA RESERVACIÓN CANCELADA -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">RES-1047</td>
+                        <td class="p-4">Juan Torres</td>
+                        <td class="p-4">310</td>
+                        <td class="p-4">20 Nov 2026</td>
+                        <td class="p-4">23 Nov 2026</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-red-100 px-3 py-1 text-red-700">Cancelada</span>
+                        </td>
+                        <td class="p-4">
+                            <button class="text-[#1E3A8A] hover:underline">Consultar</button>
+                        </td>
+                    </tr>
+
+                    <!-- CUARTA RESERVACIÓN CONFIRMADA -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">RES-1048</td>
+                        <td class="p-4">Ana Martínez</td>
+                        <td class="p-4">208</td>
+                        <td class="p-4">25 Nov 2026</td>
+                        <td class="p-4">28 Nov 2026</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-green-100 px-3 py-1 text-green-700">Confirmada</span>
+                        </td>
+                        <td class="p-4">
+                            <div class="flex gap-3">
+                                <button class="text-[#1E3A8A] hover:underline">Editar</button>
+                                <button class="text-red-600 hover:underline">Cancelar</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>

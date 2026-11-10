@@ -31,6 +31,73 @@
 
     <main class="mx-auto max-w-6xl space-y-6 p-4 py-8">
 
+        <section>
+            <h2 class="text-3xl font-bold">Iniciar sesión</h2>
+            <p class="mt-1 text-sm text-gray-600">
+                Ingresa tus datos para acceder al sistema de administración del hotel.
+            </p>
+        </section>
+
+        <!-- FORMULARIO DE ACCESO -->
+        <section class="mx-auto max-w-xl rounded-xl border border-gray-200 bg-white p-6">
+            <h3 class="text-xl font-bold">Acceso al sistema</h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Introduce el correo electrónico y la contraseña de tu cuenta.
+            </p>
+
+            <form action="#" method="post" class="mt-5 space-y-5">
+                <div>
+                    <label for="correo" class="block text-sm font-medium">
+                        Correo electrónico
+                    </label>
+                    <input
+                        id="correo"
+                        name="correo"
+                        type="email"
+                        placeholder="nombre@hotelaurea.com"
+                        autocomplete="username"
+                        required
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <div>
+                    <label for="contrasena" class="block text-sm font-medium">
+                        Contraseña
+                    </label>
+                    <input
+                        id="contrasena"
+                        name="contrasena"
+                        type="password"
+                        placeholder="Ingresa tu contraseña"
+                        autocomplete="current-password"
+                        required
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <div class="flex flex-col justify-between gap-3 text-sm sm:flex-row sm:items-center">
+                    <label for="recordarme" class="flex items-center gap-2 text-gray-600">
+                        <input
+                            id="recordarme"
+                            name="recordarme"
+                            type="checkbox"
+                            class="h-4 w-4 accent-[#1E3A8A]">
+                        Recordarme
+                    </label>
+
+                    <a href="#" class="font-medium text-[#1E3A8A] hover:underline">
+                        ¿Olvidaste tu contraseña?
+                    </a>
+                </div>
+
+                <div class="text-right">
+                    <button
+                        type="submit"
+                        class="w-full rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34] sm:w-auto">
+                        Iniciar sesión
+                    </button>
+                </div>
+            </form>
+        </section>
 
         <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">
             <p>Hotel Aurea | Sistema de administración y recepción</p>

@@ -43,6 +43,145 @@
             </p>
         </section>
 
+                <!-- INDICADORES DE SUPERVISIÓN -->
+        <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">Ocupación global</p>
+                <p class="mt-2 text-3xl font-bold text-[#1E3A8A]">78%</p>
+                <p class="mt-1 text-xs text-gray-500">31 de 40 habitaciones</p>
+            </article>
+
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">Habitaciones bloqueadas</p>
+                <p class="mt-2 text-3xl font-bold text-red-600">2</p>
+                <p class="mt-1 text-xs text-gray-500">Requieren revisión</p>
+            </article>
+
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">Usuarios activos</p>
+                <p class="mt-2 text-3xl font-bold text-green-600">12</p>
+                <p class="mt-1 text-xs text-gray-500">Con acceso al sistema</p>
+            </article>
+
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">Cambios por autorizar</p>
+                <p class="mt-2 text-3xl font-bold text-[#B48A5A]">3</p>
+                <p class="mt-1 text-xs text-gray-500">Descuentos o cancelaciones</p>
+            </article>
+        </section>
+
+        <!-- CONFIGURACIÓN GENERAL DEL HOTEL -->
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <h3 class="text-xl font-bold">Configuración general del hotel</h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Define las políticas de cobro, horarios y datos fiscales.
+            </p>
+
+            <form action="#" method="post" class="mt-5 grid gap-4 sm:grid-cols-2">
+                <div>
+                    <label for="hora-checkin" class="block text-sm font-medium">
+                        Horario de check-in
+                    </label>
+                    <input
+                        id="hora-checkin"
+                        name="hora-checkin"
+                        type="time"
+                        value="15:00"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <div>
+                    <label for="hora-checkout" class="block text-sm font-medium">
+                        Horario de check-out
+                    </label>
+                    <input
+                        id="hora-checkout"
+                        name="hora-checkout"
+                        type="time"
+                        value="12:00"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <div>
+                    <label for="politica-cobro" class="block text-sm font-medium">
+                        Política de cobro
+                    </label>
+                    <select
+                        id="politica-cobro"
+                        name="politica-cobro"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option>Pago al llegar</option>
+                        <option>Pago anticipado</option>
+                        <option>Depósito y saldo al llegar</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="datos-fiscales" class="block text-sm font-medium">
+                        Datos fiscales del hotel
+                    </label>
+                    <input
+                        id="datos-fiscales"
+                        name="datos-fiscales"
+                        type="text"
+                        placeholder="RFC o identificación fiscal"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <div class="sm:col-span-2 sm:text-right">
+                    <button
+                        type="submit"
+                        class="w-full rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34] sm:w-auto">
+                        Guardar configuración
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <div class="p-5">
+                <h3 class="text-xl font-bold">Gestión de usuarios y permisos</h3>
+                <p class="text-sm text-gray-500">
+                    Consulta quién tiene acceso al sistema y su nivel de autorización.
+                </p>
+            </div>
+
+            <table class="w-full text-left text-sm">
+                <thead class="border-y border-gray-200 bg-gray-50">
+                    <tr>
+                        <th class="p-4 font-medium">Usuario</th>
+                        <th class="p-4 font-medium">Área</th>
+                        <th class="p-4 font-medium">Perfil</th>
+                        <th class="p-4 font-medium">Estado</th>
+                        <th class="p-4 font-medium">Permisos</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">Laura Méndez</td>
+                        <td class="p-4">Recepción</td>
+                        <td class="p-4">Supervisor</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-green-100 px-3 py-1 text-green-800">Activo</span>
+                        </td>
+                        <td class="p-4">
+                            <a href="#" class="font-medium text-[#1E3A8A] hover:underline">Administrar</a>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">Daniel Cruz</td>
+                        <td class="p-4">Pagos</td>
+                        <td class="p-4">Operador</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-green-100 px-3 py-1 text-green-800">Activo</span>
+                        </td>
+                        <td class="p-4">
+                            <a href="#" class="font-medium text-[#1E3A8A] hover:underline">Administrar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
 
         <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">

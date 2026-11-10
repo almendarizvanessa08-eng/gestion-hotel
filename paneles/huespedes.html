@@ -158,6 +158,147 @@
             </table>
         </section>
 
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <h3 class="text-xl font-bold">Registrar o actualizar huésped</h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Completa los datos del perfil y asocia una reservación.
+            </p>
+
+            <form action="#" method="post" class="mt-5 grid gap-4 sm:grid-cols-2">
+                <div>
+                    <label for="nombre" class="block text-sm font-medium">Nombre completo</label>
+                    <input
+                        id="nombre"
+                        name="nombre"
+                        type="text"
+                        placeholder="Nombre del huésped"
+                        required
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <div>
+                    <label for="documento" class="block text-sm font-medium">
+                        Documento de identidad
+                    </label>
+                    <input
+                        id="documento"
+                        name="documento"
+                        type="text"
+                        placeholder="Número de identificación"
+                        required
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <div>
+                    <label for="telefono" class="block text-sm font-medium">Teléfono</label>
+                    <input
+                        id="telefono"
+                        name="telefono"
+                        type="tel"
+                        placeholder="Número de teléfono"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <div>
+                    <label for="correo" class="block text-sm font-medium">
+                        Correo electrónico
+                    </label>
+                    <input
+                        id="correo"
+                        name="correo"
+                        type="email"
+                        placeholder="correo@ejemplo.com"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <div>
+                    <label for="reservacion" class="block text-sm font-medium">
+                        Asociar reservación
+                    </label>
+                    <select
+                        id="reservacion"
+                        name="reservacion"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="">Seleccionar reservación</option>
+                        <option value="RES-1045">RES-1045 — Habitación 203</option>
+                        <option value="RES-1046">RES-1046 — Habitación 101</option>
+                        <option value="RES-1047">RES-1047 — Habitación 304</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="estado-perfil" class="block text-sm font-medium">
+                        Estado del perfil
+                    </label>
+                    <select
+                        id="estado-perfil"
+                        name="estado-perfil"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="activo">Activo</option>
+                        <option value="inactivo">Inactivo</option>
+                    </select>
+                </div>
+
+                <div class="sm:col-span-2 sm:text-right">
+                    <button
+                        type="submit"
+                        class="w-full rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34] sm:w-auto">
+                        Guardar huésped
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <div class="p-5">
+                <h3 class="text-xl font-bold">Reservaciones asociadas</h3>
+                <p class="text-sm text-gray-500">
+                    Historial de reservaciones del huésped seleccionado.
+                </p>
+            </div>
+
+            <table class="w-full min-w-[650px] text-left text-sm">
+                <thead class="border-y border-gray-200 bg-gray-50">
+                    <tr>
+                        <th class="p-4 font-medium">Folio</th>
+                        <th class="p-4 font-medium">Huésped</th>
+                        <th class="p-4 font-medium">Habitación</th>
+                        <th class="p-4 font-medium">Entrada</th>
+                        <th class="p-4 font-medium">Salida</th>
+                        <th class="p-4 font-medium">Estado</th>
+                    </tr>
+                </thead>
+
+                <tbody class="divide-y divide-gray-100">
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">RES-1045</td>
+                        <td class="p-4">Ana Martínez</td>
+                        <td class="p-4">203</td>
+                        <td class="p-4">10/11/2026</td>
+                        <td class="p-4">13/11/2026</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-green-100 px-3 py-1 text-green-800">
+                                Confirmada
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">RES-0982</td>
+                        <td class="p-4">Ana Martínez</td>
+                        <td class="p-4">101</td>
+                        <td class="p-4">02/08/2026</td>
+                        <td class="p-4">05/08/2026</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-gray-700">
+                                Finalizada
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
         <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">
             <p>Hotel Aurea | Sistema de administración y recepción</p>
             <p class="mt-1">Registro y consulta de huéspedes</p>

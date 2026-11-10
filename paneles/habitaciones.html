@@ -41,7 +41,143 @@
             </p>
         </section>
 
+                <!-- RESUMEN DE HABITACIONES -->
+        <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">Total de habitaciones</p>
+                <p class="mt-2 text-3xl font-bold text-[#1E3A8A]">40</p>
+                <p class="mt-1 text-xs text-gray-500">En el hotel</p>
+            </article>
 
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">Disponibles</p>
+                <p class="mt-2 text-3xl font-bold text-green-600">8</p>
+                <p class="mt-1 text-xs text-gray-500">Listas para reservar</p>
+            </article>
+
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">Ocupadas</p>
+                <p class="mt-2 text-3xl font-bold text-[#B48A5A]">29</p>
+                <p class="mt-1 text-xs text-gray-500">Con huéspedes registrados</p>
+            </article>
+
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">En mantenimiento</p>
+                <p class="mt-2 text-3xl font-bold text-red-600">3</p>
+                <p class="mt-1 text-xs text-gray-500">No disponibles</p>
+            </article>
+        </section>
+
+        <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <div class="flex flex-col justify-between gap-4 p-5 sm:flex-row sm:items-center">
+                <div>
+                    <h3 class="text-xl font-bold">Inventario de habitaciones</h3>
+                    <p class="text-sm text-gray-500">
+                        Consulta, agrega o modifica las habitaciones del hotel.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    class="rounded-lg bg-[#B48A5A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                    + Agregar habitación
+                </button>
+            </div>
+
+            <table class="w-full min-w-[850px] text-left text-sm">
+                <thead class="border-y border-gray-200 bg-gray-50">
+                    <tr>
+                        <th class="p-4 font-medium">Foto</th>
+                        <th class="p-4 font-medium">Habitación</th>
+                        <th class="p-4 font-medium">Tipo</th>
+                        <th class="p-4 font-medium">Capacidad</th>
+                        <th class="p-4 font-medium">Tarifa por noche</th>
+                        <th class="p-4 font-medium">Estado</th>
+                        <th class="p-4 font-medium">Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody class="divide-y divide-gray-100">
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4">
+                            <img
+                                src="img/habitaciondoble.jpg"
+                                alt="Habitación doble"
+                                class="h-16 w-24 rounded-lg object-cover">
+                        </td>
+                        <td class="p-4 font-medium">101</td>
+                        <td class="p-4">Doble</td>
+                        <td class="p-4">2 personas</td>
+                        <td class="p-4">$1,500</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-green-100 px-3 py-1 text-green-800">
+                                Disponible
+                            </span>
+                        </td>
+                        <td class="space-x-3 p-4">
+                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
+                                Editar
+                            </button>
+                            <button type="button" class="font-medium text-red-600 hover:underline">
+                                Eliminar
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4">
+                            <img
+                                src="img/habitacionkingsize.avif"
+                                alt="Habitación con cama king size"
+                                class="h-16 w-24 rounded-lg object-cover">
+                        </td>
+                        <td class="p-4 font-medium">205</td>
+                        <td class="p-4">King size</td>
+                        <td class="p-4">2 personas</td>
+                        <td class="p-4">$2,400</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-blue-800">
+                                Ocupada
+                            </span>
+                        </td>
+                        <td class="space-x-3 p-4">
+                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
+                                Editar
+                            </button>
+                            <button type="button" class="font-medium text-red-600 hover:underline">
+                                Eliminar
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4">
+                            <img
+                                src="img/habitacionmatrimonial.jpg"
+                                alt="Habitación matrimonial"
+                                class="h-16 w-24 rounded-lg object-cover">
+                        </td>
+                        <td class="p-4 font-medium">310</td>
+                        <td class="p-4">Matrimonial</td>
+                        <td class="p-4">2 personas</td>
+                        <td class="p-4">$1,900</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-red-100 px-3 py-1 text-red-700">
+                                Mantenimiento
+                            </span>
+                        </td>
+                        <td class="space-x-3 p-4">
+                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
+                                Editar
+                            </button>
+                            <button type="button" class="font-medium text-red-600 hover:underline">
+                                Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
         <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">
             <p>Hotel Aurea | Sistema de administración y recepción</p>

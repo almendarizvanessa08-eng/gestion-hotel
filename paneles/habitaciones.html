@@ -179,6 +179,106 @@
             </table>
         </section>
 
+        <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <div class="p-5">
+                <h3 class="text-xl font-bold">Tarifas de habitaciones</h3>
+                <p class="text-sm text-gray-500">
+                    Consulta las tarifas estándar y los precios de temporada.
+                </p>
+            </div>
+
+            <table class="w-full min-w-[650px] text-left text-sm">
+                <thead class="border-y border-gray-200 bg-gray-50">
+                    <tr>
+                        <th class="p-4 font-medium">Tipo</th>
+                        <th class="p-4 font-medium">Tarifa estándar</th>
+                        <th class="p-4 font-medium">Temporada</th>
+                        <th class="p-4 font-medium">Tarifa de temporada</th>
+                        <th class="p-4 font-medium">Acción</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">Doble</td>
+                        <td class="p-4">$1,500 por noche</td>
+                        <td class="p-4">Temporada alta</td>
+                        <td class="p-4">$1,900 por noche</td>
+                        <td class="p-4">
+                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
+                                Modificar
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">King size</td>
+                        <td class="p-4">$2,400 por noche</td>
+                        <td class="p-4">Temporada alta</td>
+                        <td class="p-4">$2,900 por noche</td>
+                        <td class="p-4">
+                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
+                                Modificar
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">Matrimonial</td>
+                        <td class="p-4">$1,900 por noche</td>
+                        <td class="p-4">Temporada alta</td>
+                        <td class="p-4">$2,300 por noche</td>
+                        <td class="p-4">
+                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
+                                Modificar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <h3 class="text-xl font-bold">Actualizar estado de habitación</h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Cambia la disponibilidad de una habitación.
+            </p>
+
+            <form action="#" method="post" class="mt-5 grid gap-4 sm:grid-cols-3">
+                <div>
+                    <label for="habitacion" class="block text-sm font-medium">Habitación</label>
+                    <select
+                        id="habitacion"
+                        name="habitacion"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="">Seleccionar habitación</option>
+                        <option value="101">Habitación 101</option>
+                        <option value="205">Habitación 205</option>
+                        <option value="310">Habitación 310</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="estado" class="block text-sm font-medium">Nuevo estado</label>
+                    <select
+                        id="estado"
+                        name="estado"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="">Seleccionar estado</option>
+                        <option value="disponible">Disponible</option>
+                        <option value="ocupada">Ocupada</option>
+                        <option value="limpieza">En limpieza</option>
+                        <option value="mantenimiento">En mantenimiento</option>
+                    </select>
+                </div>
+
+                <div class="flex items-end">
+                    <button
+                        type="submit"
+                        class="w-full rounded-lg bg-[#1E3A8A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                        Actualizar estado
+                    </button>
+                </div>
+            </form>
+        </section>
+
         <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">
             <p>Hotel Aurea | Sistema de administración y recepción</p>
             <p class="mt-1">Gestión de habitaciones y tarifas</p>

@@ -41,6 +41,163 @@
             </p>
         </section>
 
+        <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">Tareas pendientes</p>
+                <p class="mt-2 text-3xl font-bold text-[#B48A5A]">6</p>
+                <p class="mt-1 text-xs text-gray-500">Por asignar o completar</p>
+            </article>
+
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">En limpieza</p>
+                <p class="mt-2 text-3xl font-bold text-yellow-600">4</p>
+                <p class="mt-1 text-xs text-gray-500">Habitaciones en proceso</p>
+            </article>
+
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">En mantenimiento</p>
+                <p class="mt-2 text-3xl font-bold text-red-600">2</p>
+                <p class="mt-1 text-xs text-gray-500">Requieren atención</p>
+            </article>
+
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">Listas para huéspedes</p>
+                <p class="mt-2 text-3xl font-bold text-green-600">28</p>
+                <p class="mt-1 text-xs text-gray-500">Habitaciones disponibles</p>
+            </article>
+        </section>
+
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <h3 class="text-xl font-bold">Asignar tarea al personal</h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Asigna limpieza o mantenimiento a un integrante del equipo.
+            </p>
+
+            <form action="#" method="post" class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div>
+                    <label for="habitacion-tarea" class="block text-sm font-medium">
+                        Habitación
+                    </label>
+                    <select
+                        id="habitacion-tarea"
+                        name="habitacion"
+                        required
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="">Seleccionar habitación</option>
+                        <option value="101">Habitación 101</option>
+                        <option value="208">Habitación 208</option>
+                        <option value="310">Habitación 310</option>
+                        <option value="402">Habitación 402</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="tipo-tarea" class="block text-sm font-medium">Tipo de tarea</label>
+                    <select
+                        id="tipo-tarea"
+                        name="tipo-tarea"
+                        required
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="">Seleccionar tarea</option>
+                        <option value="limpieza">Limpieza</option>
+                        <option value="mantenimiento">Mantenimiento</option>
+                        <option value="inspeccion">Inspección</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="personal" class="block text-sm font-medium">Asignar a</label>
+                    <select
+                        id="personal"
+                        name="personal"
+                        required
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="">Seleccionar empleado</option>
+                        <option value="sofia">Sofía Ramírez</option>
+                        <option value="miguel">Miguel Torres</option>
+                        <option value="lucia">Lucía Herrera</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="prioridad" class="block text-sm font-medium">Prioridad</label>
+                    <select
+                        id="prioridad"
+                        name="prioridad"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="normal">Normal</option>
+                        <option value="alta">Alta</option>
+                        <option value="urgente">Urgente</option>
+                    </select>
+                </div>
+
+                <div class="sm:col-span-2 lg:col-span-4 sm:text-right">
+                    <button
+                        type="submit"
+                        class="w-full rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34] sm:w-auto">
+                        Asignar tarea
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- TAREAS ASIGNADAS -->
+        <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <div class="p-5">
+                <h3 class="text-xl font-bold">Tareas asignadas</h3>
+                <p class="text-sm text-gray-500">
+                    Consulta el progreso de las tareas del personal.
+                </p>
+            </div>
+
+            <table class="w-full min-w-[750px] text-left text-sm">
+                <thead class="border-y border-gray-200 bg-gray-50">
+                    <tr>
+                        <th class="p-4 font-medium">Habitación</th>
+                        <th class="p-4 font-medium">Tarea</th>
+                        <th class="p-4 font-medium">Empleado</th>
+                        <th class="p-4 font-medium">Prioridad</th>
+                        <th class="p-4 font-medium">Estado</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">208</td>
+                        <td class="p-4">Limpieza</td>
+                        <td class="p-4">Sofía Ramírez</td>
+                        <td class="p-4">Normal</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-800">
+                                En proceso
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">402</td>
+                        <td class="p-4">Mantenimiento</td>
+                        <td class="p-4">Miguel Torres</td>
+                        <td class="p-4">Alta</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-red-100 px-3 py-1 text-red-700">
+                                Pendiente
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">101</td>
+                        <td class="p-4">Inspección</td>
+                        <td class="p-4">Lucía Herrera</td>
+                        <td class="p-4">Normal</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-green-100 px-3 py-1 text-green-800">
+                                Completada
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
         <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">
             <p>Hotel Aurea | Sistema de administración y recepción</p>
             <p class="mt-1">Operación y mantenimiento de habitaciones</p>

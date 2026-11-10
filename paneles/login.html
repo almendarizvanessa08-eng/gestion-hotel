@@ -3,55 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión | Hotel</title>
-    <scrip src="https://tailwindcss.com"></scrip>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Iniciar sesión | Hotel Aurea</title>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
-    <main class="w-full max-w-md rounded-2xl border border-stone-200 bg-white p-8 shadow-sm">
-        <header class="mb-8 text-center">
-            <h1 class="text-2xl font-semibold text-[#0E3A5D]">
-                Gestión Hotelera
-            </h1>
-                <p class="mt-2 text-sm text-slate-500">
-                Inicia sesión para continuar
-                </p>
-        </header>
-        <form class="space-y-5">
-            <div>
-                <label for="correo" class="mb-2 block text-sm font-medium">
-                    Correo electrónico
-                </label>
-                <input
-                    id="correo"
-                    name="correo"
-                    type="email"
-                    placeholder="nombre@correo.com"
-                    autocomplete="username"
-                    required
-                    class="w-full rounded-lg border border-slate-300 p-3 focus:border-[#2B78B8] focus:outline-none"
-                >
-            </div>
-            <div>
-                <label for="contrasena" class="mb-2 block text-sm font-medium">
-                    Contraseña
-                </label>
-                <input
-                    id="contrasena"
-                    name="contrasena"
-                    type="password"
-                    placeholder="Ingresa tu contraseña"
-                    autocomplete="current-password"
-                    required
-                    class="w-full rounded-lg border border-slate-300 p-3 focus:border-[#2B78B8] focus:outline-none"
-                >
-            </div>
-            <div class="text-right">
-                <a href="#" class="text-sm text-[#2B78B8] hover:underline">
-                    ¿Olvidaste tu contraseña?
-                </a>
-            </div>
-        </form>
-    </main>
-</body>
-</html>
+<body>
+
+<header>
+    <h1>HOTEL AUREA</h1>
+    <p>Panel de administración</p>
+</header>
+
+<main>
+    <h2>Iniciar sesión</h2>
+    <p>Ingresa tus datos para acceder al sistema del hotel.</p>
+
+<form action="#" method="post">
+    <div>
+        <label for="correo">Correo electrónico</label>
+        <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="nombre@hotelaurea.com"
+            required>
+    </div>
+
+    <div>
+        <label for="contrasena">Contraseña</label>
+        <input
+            type="password"
+            id="contrasena"
+            name="contrasena"
+            placeholder="Ingresa tu contraseña"
+            required>
+    </div>
+
+    <div>
+        <input type="checkbox" id="recordarme" name="recordarme">
+        <label for="recordarme">Recordarme</label>
+    </div>
+
+    <button type="submit">Entrar al panel</button>
+    </form>

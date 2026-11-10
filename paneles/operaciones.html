@@ -141,7 +141,6 @@
             </form>
         </section>
 
-        <!-- TAREAS ASIGNADAS -->
         <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
             <div class="p-5">
                 <h3 class="text-xl font-bold">Tareas asignadas</h3>
@@ -196,6 +195,101 @@
                     </tr>
                 </tbody>
             </table>
+        </section>
+
+        <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <div class="p-5">
+                <h3 class="text-xl font-bold">Control de limpieza y mantenimiento</h3>
+                <p class="text-sm text-gray-500">
+                    Supervisa el estado operativo de cada habitación.
+                </p>
+            </div>
+
+            <table class="w-full min-w-[700px] text-left text-sm">
+                <thead class="border-y border-gray-200 bg-gray-50">
+                    <tr>
+                        <th class="p-4 font-medium">Habitación</th>
+                        <th class="p-4 font-medium">Actividad</th>
+                        <th class="p-4 font-medium">Responsable</th>
+                        <th class="p-4 font-medium">Última actualización</th>
+                        <th class="p-4 font-medium">Estado</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">208</td>
+                        <td class="p-4">Limpieza general</td>
+                        <td class="p-4">Sofía Ramírez</td>
+                        <td class="p-4">10/11/2026, 10:15</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-800">
+                                En limpieza
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">402</td>
+                        <td class="p-4">Revisión de aire acondicionado</td>
+                        <td class="p-4">Miguel Torres</td>
+                        <td class="p-4">10/11/2026, 09:40</td>
+                        <td class="p-4">
+                            <span class="rounded-full bg-red-100 px-3 py-1 text-red-700">
+                                En mantenimiento
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <h3 class="text-xl font-bold">Cambiar estado de habitación</h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Actualiza la disponibilidad después de una limpieza o mantenimiento.
+            </p>
+
+            <form action="#" method="post" class="mt-5 grid gap-4 sm:grid-cols-3">
+                <div>
+                    <label for="habitacion-estado" class="block text-sm font-medium">
+                        Habitación
+                    </label>
+                    <select
+                        id="habitacion-estado"
+                        name="habitacion"
+                        required
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="">Seleccionar habitación</option>
+                        <option value="101">Habitación 101</option>
+                        <option value="208">Habitación 208</option>
+                        <option value="402">Habitación 402</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="nuevo-estado" class="block text-sm font-medium">
+                        Nuevo estado
+                    </label>
+                    <select
+                        id="nuevo-estado"
+                        name="estado"
+                        required
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                        <option value="">Seleccionar estado</option>
+                        <option value="disponible">Disponible</option>
+                        <option value="ocupada">Ocupada</option>
+                        <option value="limpieza">En limpieza</option>
+                        <option value="mantenimiento">En mantenimiento</option>
+                    </select>
+                </div>
+
+                <div class="flex items-end">
+                    <button
+                        type="submit"
+                        class="w-full rounded-lg bg-[#1E3A8A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                        Actualizar estado
+                    </button>
+                </div>
+            </form>
         </section>
 
         <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">

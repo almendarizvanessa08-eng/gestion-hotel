@@ -41,6 +41,123 @@
             </p>
         </section>
 
+        <section class="grid gap-4 sm:grid-cols-3">
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">Huéspedes registrados</p>
+                <p class="mt-2 text-3xl font-bold text-[#1E3A8A]">58</p>
+                <p class="mt-1 text-xs text-gray-500">En el sistema</p>
+            </article>
+
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">Huéspedes actuales</p>
+                <p class="mt-2 text-3xl font-bold text-[#B48A5A]">32</p>
+                <p class="mt-1 text-xs text-gray-500">Registrados en el hotel</p>
+            </article>
+
+            <article class="rounded-xl border border-gray-200 bg-white p-5">
+                <p class="text-sm text-gray-500">Reservaciones activas</p>
+                <p class="mt-2 text-3xl font-bold text-green-600">18</p>
+                <p class="mt-1 text-xs text-gray-500">Asociadas a huéspedes</p>
+            </article>
+        </section>
+
+        <section class="rounded-xl border border-gray-200 bg-white p-6">
+            <h3 class="text-xl font-bold">Buscar huéspedes</h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Busca por nombre, documento o correo electrónico.
+            </p>
+
+            <form action="#" method="get" class="mt-5 grid gap-4 sm:grid-cols-3">
+                <div class="sm:col-span-2">
+                    <label for="busqueda" class="block text-sm font-medium">
+                        Nombre, documento o correo
+                    </label>
+                    <input
+                        id="busqueda"
+                        name="busqueda"
+                        type="search"
+                        placeholder="Ej. Ana Martínez"
+                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                </div>
+
+                <div class="flex items-end">
+                    <button
+                        type="submit"
+                        class="w-full rounded-lg bg-[#1E3A8A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                        Buscar huésped
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <div class="p-5">
+                <h3 class="text-xl font-bold">Directorio de huéspedes</h3>
+                <p class="text-sm text-gray-500">
+                    Consulta perfiles, reservaciones e historial de estancia.
+                </p>
+            </div>
+
+            <table class="w-full min-w-[750px] text-left text-sm">
+                <thead class="border-y border-gray-200 bg-gray-50">
+                    <tr>
+                        <th class="p-4 font-medium">Huésped</th>
+                        <th class="p-4 font-medium">Documento</th>
+                        <th class="p-4 font-medium">Correo electrónico</th>
+                        <th class="p-4 font-medium">Reservaciones</th>
+                        <th class="p-4 font-medium">Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody class="divide-y divide-gray-100">
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">Ana Martínez</td>
+                        <td class="p-4">INE •••• 4821</td>
+                        <td class="p-4">ana.martinez@correo.com</td>
+                        <td class="p-4">3</td>
+                        <td class="space-x-3 p-4">
+                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
+                                Ver historial
+                            </button>
+                            <button type="button" class="font-medium text-[#B48A5A] hover:underline">
+                                Editar perfil
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">Carlos Mendoza</td>
+                        <td class="p-4">INE •••• 1935</td>
+                        <td class="p-4">carlos.mendoza@correo.com</td>
+                        <td class="p-4">2</td>
+                        <td class="space-x-3 p-4">
+                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
+                                Ver historial
+                            </button>
+                            <button type="button" class="font-medium text-[#B48A5A] hover:underline">
+                                Editar perfil
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium">Mariana López</td>
+                        <td class="p-4">INE •••• 7204</td>
+                        <td class="p-4">mariana.lopez@correo.com</td>
+                        <td class="p-4">1</td>
+                        <td class="space-x-3 p-4">
+                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
+                                Ver historial
+                            </button>
+                            <button type="button" class="font-medium text-[#B48A5A] hover:underline">
+                                Editar perfil
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
         <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">
             <p>Hotel Aurea | Sistema de administración y recepción</p>
             <p class="mt-1">Registro y consulta de huéspedes</p>

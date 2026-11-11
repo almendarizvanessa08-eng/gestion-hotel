@@ -8,18 +8,23 @@
 </head>
 <body class="bg-[#E7E2D9] text-[#0B1B34]">
 
-    <!-- ENCABEZADO PRINCIPAL DEL HOTEL -->
     <header class="bg-[#0B1B34] text-white">
-        <nav class="mx-auto flex max-w-6xl items-center justify-between p-4">
+        <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 p-4">
             <div>
                 <h1 class="text-xl font-bold">HOTEL AUREA</h1>
                 <p class="text-sm text-[#A1B2D6]">Sistema de administración</p>
             </div>
-            <div class="hidden gap-6 text-sm sm:flex">
-                <a href="#" class="hover:text-[#B48A5A]">Recepción</a>
-                <a href="#" class="hover:text-[#B48A5A]">Reservaciones</a>
-                <a href="#" class="hover:text-[#B48A5A]">Servicios</a>
-                <a href="#" class="text-[#B48A5A]">Reportes</a>
+            <!-- Enlaces de navegación entre las pantallas del sistema -->
+            <div class="hidden flex-wrap gap-5 text-sm sm:flex">
+                <a href="recepcion.html" class="hover:text-[#B48A5A]">Recepción</a>
+                <a href="reservaciones.html" class="hover:text-[#B48A5A]">Reservaciones</a>
+                <a href="habitaciones.html" class="hover:text-[#B48A5A]">Habitaciones</a>
+                <a href="huespedes.html" class="hover:text-[#B48A5A]">Huéspedes</a>
+                <a href="servicios.html" class="hover:text-[#B48A5A]">Servicios</a>
+                <a href="pagos.html" class="hover:text-[#B48A5A]">Pagos</a>
+                <a href="reportes.html" class="text-[#B48A5A]">Reportes</a>
+                <a href="operaciones.html" class="hover:text-[#B48A5A]">Operaciones</a>
+                <a href="administracion.html" class="hover:text-[#B48A5A]">Administración</a>
             </div>
             <div class="text-right">
                 <p class="text-sm font-semibold">Administrador</p>
@@ -28,10 +33,8 @@
         </nav>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL DE REPORTES -->
     <main class="mx-auto max-w-6xl space-y-6 p-4 py-8">
 
-        <!-- TÍTULO PRINCIPAL -->
         <section>
             <h2 class="text-3xl font-bold">Reportes del hotel</h2>
             <p class="mt-1 text-sm text-gray-600">
@@ -39,31 +42,26 @@
             </p>
         </section>
 
-        <!-- INDICADORES GENERALES DEL HOTEL -->
         <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
-            <!-- INGRESOS GENERADOS -->
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Ingresos del mes</p>
                 <p class="mt-2 text-3xl font-bold text-green-600">$85,400</p>
-                <p class="mt-1 text-xs text-gray-500">Ingresos registrados</p>
+                <p class="mt-1 text-xs text-gray-500">Pagos recibidos en recepción</p>
             </article>
 
-            <!-- PORCENTAJE DE OCUPACIÓN -->
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Ocupación promedio</p>
                 <p class="mt-2 text-3xl font-bold text-[#1E3A8A]">78%</p>
                 <p class="mt-1 text-xs text-gray-500">Habitaciones ocupadas</p>
             </article>
 
-            <!-- RESERVACIONES REGISTRADAS -->
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Reservaciones</p>
                 <p class="mt-2 text-3xl font-bold text-[#B48A5A]">124</p>
                 <p class="mt-1 text-xs text-gray-500">Registros del mes</p>
             </article>
 
-            <!-- CANCELACIONES REGISTRADAS -->
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Cancelaciones</p>
                 <p class="mt-2 text-3xl font-bold text-red-600">12</p>
@@ -71,7 +69,7 @@
             </article>
 
         </section>
-                <!-- FILTROS PARA GENERAR REPORTES -->
+
         <section class="rounded-xl border border-gray-200 bg-white p-6">
             <h3 class="text-xl font-bold">Consultar reportes</h3>
             <p class="mt-1 text-sm text-gray-500">
@@ -80,21 +78,18 @@
 
             <form class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
-                <!-- FECHA INICIAL DEL REPORTE -->
                 <div>
                     <label for="fechaInicio" class="block text-sm font-medium">Fecha inicial</label>
                     <input id="fechaInicio" type="date"
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- FECHA FINAL DEL REPORTE -->
                 <div>
                     <label for="fechaFin" class="block text-sm font-medium">Fecha final</label>
                     <input id="fechaFin" type="date"
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- TIPO DE REPORTE -->
                 <div>
                     <label for="tipoReporte" class="block text-sm font-medium">Tipo de reporte</label>
                     <select id="tipoReporte"
@@ -108,7 +103,6 @@
                     </select>
                 </div>
 
-                <!-- PERIODO DEL REPORTE -->
                 <div>
                     <label for="periodo" class="block text-sm font-medium">Periodo</label>
                     <select id="periodo"
@@ -121,7 +115,6 @@
                     </select>
                 </div>
 
-                <!-- BOTÓN PARA GENERAR EL REPORTE -->
                 <div class="text-center sm:col-span-2 lg:col-span-4 sm:text-right">
                     <button type="button"
                         class="rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34]">
@@ -132,7 +125,6 @@
             </form>
         </section>
 
-        <!-- ESTADÍSTICAS DE INGRESOS -->
         <section class="rounded-xl border border-gray-200 bg-white p-6">
             <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
                 <div>
@@ -144,10 +136,8 @@
                 </span>
             </div>
 
-            <!-- GRÁFICA VISUAL DE INGRESOS MENSUALES -->
             <div class="mt-6 space-y-4">
 
-                <!-- INGRESOS DE ENERO -->
                 <div>
                     <div class="mb-1 flex justify-between text-sm">
                         <span>Enero</span>
@@ -158,7 +148,6 @@
                     </div>
                 </div>
 
-                <!-- INGRESOS DE FEBRERO -->
                 <div>
                     <div class="mb-1 flex justify-between text-sm">
                         <span>Febrero</span>
@@ -169,7 +158,6 @@
                     </div>
                 </div>
 
-                <!-- INGRESOS DE MARZO -->
                 <div>
                     <div class="mb-1 flex justify-between text-sm">
                         <span>Marzo</span>
@@ -183,15 +171,12 @@
             </div>
         </section>
 
-        <!-- ESTADÍSTICAS DE OCUPACIÓN Y SERVICIOS -->
         <section class="grid gap-6 sm:grid-cols-2">
 
-            <!-- REPORTE DE OCUPACIÓN -->
             <article class="rounded-xl border border-gray-200 bg-white p-6">
                 <h3 class="text-xl font-bold">Ocupación del hotel</h3>
                 <p class="mt-1 text-sm text-gray-500">Distribución de las habitaciones.</p>
 
-                <!-- PORCENTAJES DE OCUPACIÓN -->
                 <div class="mt-5 space-y-4">
                     <div>
                         <div class="mb-1 flex justify-between text-sm">
@@ -225,14 +210,12 @@
                 </div>
             </article>
 
-            <!-- REPORTE DE SERVICIOS MÁS SOLICITADOS -->
             <article class="rounded-xl border border-gray-200 bg-white p-6">
                 <h3 class="text-xl font-bold">Servicios más solicitados</h3>
                 <p class="mt-1 text-sm text-gray-500">Servicios utilizados por los huéspedes.</p>
 
                 <div class="mt-5 space-y-4">
 
-                    <!-- SERVICIO DE DESAYUNO -->
                     <div class="flex items-center justify-between rounded-lg bg-[#E7E2D9] p-3">
                         <div>
                             <p class="font-semibold">Desayuno buffet</p>
@@ -241,7 +224,6 @@
                         <span class="font-bold text-[#1E3A8A]">85</span>
                     </div>
 
-                    <!-- SERVICIO DE LAVANDERÍA -->
                     <div class="flex items-center justify-between rounded-lg bg-gray-50 p-3">
                         <div>
                             <p class="font-semibold">Lavandería</p>
@@ -250,7 +232,6 @@
                         <span class="font-bold text-[#1E3A8A]">42</span>
                     </div>
 
-                    <!-- SERVICIO DE TRANSPORTE -->
                     <div class="flex items-center justify-between rounded-lg bg-gray-50 p-3">
                         <div>
                             <p class="font-semibold">Transporte</p>
@@ -263,7 +244,7 @@
             </article>
 
         </section>
-                <!-- HISTORIAL DE MOVIMIENTOS Y RESERVACIONES -->
+
         <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
             <div class="p-5">
                 <h3 class="text-xl font-bold">Historial de reservaciones</h3>
@@ -285,7 +266,6 @@
                 </thead>
                 <tbody class="divide-y divide-gray-100">
 
-                    <!-- RESERVACIÓN CONFIRMADA -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">RES-1045</td>
                         <td class="p-4">Carlos Ramírez</td>
@@ -297,7 +277,6 @@
                         </td>
                     </tr>
 
-                    <!-- RESERVACIÓN MODIFICADA -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">RES-1046</td>
                         <td class="p-4">María López</td>
@@ -309,7 +288,6 @@
                         </td>
                     </tr>
 
-                    <!-- RESERVACIÓN CANCELADA -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">RES-1047</td>
                         <td class="p-4">Juan Torres</td>
@@ -321,7 +299,6 @@
                         </td>
                     </tr>
 
-                    <!-- RESERVACIÓN CONFIRMADA -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">RES-1048</td>
                         <td class="p-4">Ana Martínez</td>
@@ -337,7 +314,6 @@
             </table>
         </section>
 
-        <!-- RESUMEN DE CANCELACIONES -->
         <section class="rounded-xl border border-gray-200 bg-white p-6">
             <h3 class="text-xl font-bold">Reporte de cancelaciones</h3>
             <p class="mt-1 text-sm text-gray-500">
@@ -346,28 +322,24 @@
 
             <div class="mt-5 grid gap-4 sm:grid-cols-3">
 
-                <!-- TOTAL DE CANCELACIONES -->
                 <div class="rounded-lg bg-red-50 p-4">
                     <p class="text-sm text-gray-500">Total canceladas</p>
                     <p class="mt-2 text-2xl font-bold text-red-600">12</p>
                 </div>
 
-                <!-- CANCELACIONES CON REEMBOLSO -->
                 <div class="rounded-lg bg-[#E7E2D9] p-4">
                     <p class="text-sm text-gray-500">Con reembolso</p>
-                    <p class="mt-2 text-2xl font-bold text-[#1E3A8A]">8</p>
+                    <p class="mt-2 text-2xl font-bold text-[#1E3A8A]">0</p>
                 </div>
 
-                <!-- CANCELACIONES SIN REEMBOLSO -->
                 <div class="rounded-lg bg-gray-50 p-4">
                     <p class="text-sm text-gray-500">Sin reembolso</p>
-                    <p class="mt-2 text-2xl font-bold text-[#B48A5A]">4</p>
+                    <p class="mt-2 text-2xl font-bold text-[#B48A5A]">12</p>
                 </div>
 
             </div>
         </section>
 
-        <!-- OPCIONES PARA EXPORTAR LOS REPORTES -->
         <section class="rounded-xl border border-gray-200 bg-white p-6">
             <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
                 <div>
@@ -377,19 +349,17 @@
                     </p>
                 </div>
 
-                <!-- BOTONES DE EXPORTACIÓN -->
                 <div class="flex flex-wrap gap-3">
-                    <button class="rounded-lg bg-[#1E3A8A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                    <button type="button" class="rounded-lg bg-[#1E3A8A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
                         Descargar PDF
                     </button>
-                    <button class="rounded-lg border border-[#B48A5A] px-5 py-3 font-semibold text-[#B48A5A] hover:bg-[#B48A5A] hover:text-white">
+                    <button type="button" class="rounded-lg border border-[#B48A5A] px-5 py-3 font-semibold text-[#B48A5A] hover:bg-[#B48A5A] hover:text-white">
                         Exportar Excel
                     </button>
                 </div>
             </div>
         </section>
 
-        <!-- PIE DE PÁGINA DEL SISTEMA -->
         <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">
             <p>Hotel Aurea | Sistema de reportes administrativos</p>
             <p class="mt-1">Información y estadísticas generales del hotel</p>

@@ -16,14 +16,17 @@
                 <p class="text-sm text-[#A1B2D6]">Panel de administración</p>
             </div>
 
+            <!-- Enlaces de navegación entre las pantallas del sistema -->
             <div class="hidden flex-wrap justify-center gap-5 text-sm lg:flex">
-                <a href="#" class="hover:text-[#B48A5A]">Recepción</a>
-                <a href="#" class="hover:text-[#B48A5A]">Reservaciones</a>
-                <a href="#" class="hover:text-[#B48A5A]">Habitaciones</a>
-                <a href="#" class="font-semibold text-[#B48A5A]">Huéspedes</a>
-                <a href="#" class="hover:text-[#B48A5A]">Servicios</a>
-                <a href="#" class="hover:text-[#B48A5A]">Pagos</a>
-                <a href="#" class="hover:text-[#B48A5A]">Reportes</a>
+                <a href="recepcion.html" class="hover:text-[#B48A5A]">Recepción</a>
+                <a href="reservaciones.html" class="hover:text-[#B48A5A]">Reservaciones</a>
+                <a href="habitaciones.html" class="hover:text-[#B48A5A]">Habitaciones</a>
+                <a href="huespedes.html" class="font-semibold text-[#B48A5A]">Huéspedes</a>
+                <a href="servicios.html" class="hover:text-[#B48A5A]">Servicios</a>
+                <a href="pagos.html" class="hover:text-[#B48A5A]">Pagos</a>
+                <a href="reportes.html" class="hover:text-[#B48A5A]">Reportes</a>
+                <a href="operaciones.html" class="hover:text-[#B48A5A]">Operaciones</a>
+                <a href="administracion.html" class="hover:text-[#B48A5A]">Administración</a>
             </div>
 
             <div class="text-right">
@@ -116,12 +119,12 @@
                         <td class="p-4">ana.martinez@correo.com</td>
                         <td class="p-4">3</td>
                         <td class="space-x-3 p-4">
-                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
+                            <a href="reservaciones.html" class="font-medium text-[#1E3A8A] hover:underline">
                                 Ver historial
-                            </button>
-                            <button type="button" class="font-medium text-[#B48A5A] hover:underline">
+                            </a>
+                            <a href="#registro-huesped" class="font-medium text-[#B48A5A] hover:underline">
                                 Editar perfil
-                            </button>
+                            </a>
                         </td>
                     </tr>
 
@@ -131,12 +134,12 @@
                         <td class="p-4">carlos.mendoza@correo.com</td>
                         <td class="p-4">2</td>
                         <td class="space-x-3 p-4">
-                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
+                            <a href="reservaciones.html" class="font-medium text-[#1E3A8A] hover:underline">
                                 Ver historial
-                            </button>
-                            <button type="button" class="font-medium text-[#B48A5A] hover:underline">
+                            </a>
+                            <a href="#registro-huesped" class="font-medium text-[#B48A5A] hover:underline">
                                 Editar perfil
-                            </button>
+                            </a>
                         </td>
                     </tr>
 
@@ -146,19 +149,19 @@
                         <td class="p-4">mariana.lopez@correo.com</td>
                         <td class="p-4">1</td>
                         <td class="space-x-3 p-4">
-                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
+                            <a href="reservaciones.html" class="font-medium text-[#1E3A8A] hover:underline">
                                 Ver historial
-                            </button>
-                            <button type="button" class="font-medium text-[#B48A5A] hover:underline">
+                            </a>
+                            <a href="#registro-huesped" class="font-medium text-[#B48A5A] hover:underline">
                                 Editar perfil
-                            </button>
+                            </a>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <section class="rounded-xl border border-gray-200 bg-white p-6">
+        <section id="registro-huesped" class="rounded-xl border border-gray-200 bg-white p-6">
             <h3 class="text-xl font-bold">Registrar o actualizar huésped</h3>
             <p class="mt-1 text-sm text-gray-500">
                 Completa los datos del perfil y asocia una reservación.
@@ -255,6 +258,9 @@
                 <p class="text-sm text-gray-500">
                     Historial de reservaciones del huésped seleccionado.
                 </p>
+                <a href="reservaciones.html" class="mt-2 inline-block font-medium text-[#1E3A8A] hover:underline">
+                    Ir a gestión de reservaciones
+                </a>
             </div>
 
             <table class="w-full min-w-[650px] text-left text-sm">

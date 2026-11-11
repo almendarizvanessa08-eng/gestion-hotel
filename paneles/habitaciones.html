@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,14 +17,17 @@
                 <p class="text-sm text-[#A1B2D6]">Panel de administración</p>
             </div>
 
+            <!-- Enlaces de navegación entre las pantallas del sistema -->
             <div class="hidden flex-wrap justify-center gap-5 text-sm lg:flex">
-                <a href="#" class="hover:text-[#B48A5A]">Recepción</a>
-                <a href="#" class="hover:text-[#B48A5A]">Reservaciones</a>
-                <a href="#" class="font-semibold text-[#B48A5A]">Habitaciones</a>
-                <a href="#" class="hover:text-[#B48A5A]">Clientes</a>
-                <a href="#" class="hover:text-[#B48A5A]">Servicios</a>
-                <a href="#" class="hover:text-[#B48A5A]">Pagos</a>
-                <a href="#" class="hover:text-[#B48A5A]">Reportes</a>
+                <a href="recepcion.html" class="hover:text-[#B48A5A]">Recepción</a>
+                <a href="reservaciones.html" class="hover:text-[#B48A5A]">Reservaciones</a>
+                <a href="habitaciones.html" class="font-semibold text-[#B48A5A]">Habitaciones</a>
+                <a href="huespedes.html" class="hover:text-[#B48A5A]">Clientes</a>
+                <a href="servicios.html" class="hover:text-[#B48A5A]">Servicios</a>
+                <a href="pagos.html" class="hover:text-[#B48A5A]">Pagos</a>
+                <a href="reportes.html" class="hover:text-[#B48A5A]">Reportes</a>
+                <a href="operaciones.html" class="hover:text-[#B48A5A]">Operaciones</a>
+                <a href="administracion.html" class="hover:text-[#B48A5A]">Administración</a>
             </div>
 
             <div class="text-right">
@@ -41,7 +45,6 @@
             </p>
         </section>
 
-                <!-- RESUMEN DE HABITACIONES -->
         <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Total de habitaciones</p>
@@ -77,11 +80,10 @@
                     </p>
                 </div>
 
-                <button
-                    type="button"
-                    class="rounded-lg bg-[#B48A5A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                <a href="#actualizar-habitacion"
+                   class="rounded-lg bg-[#B48A5A] px-5 py-3 text-center font-semibold text-white hover:bg-[#0B1B34]">
                     + Agregar habitación
-                </button>
+                </a>
             </div>
 
             <table class="w-full min-w-[850px] text-left text-sm">
@@ -100,79 +102,52 @@
                 <tbody class="divide-y divide-gray-100">
                     <tr class="hover:bg-gray-50">
                         <td class="p-4">
-                            <img
-                                src="img/habitaciondoble.jpg"
-                                alt="Habitación doble"
-                                class="h-16 w-24 rounded-lg object-cover">
+                            <img src="../img/habitaciondoble.jpg" alt="Habitación doble" class="h-16 w-24 rounded-lg object-cover">
                         </td>
                         <td class="p-4 font-medium">101</td>
                         <td class="p-4">Doble</td>
                         <td class="p-4">2 personas</td>
                         <td class="p-4">$1,500</td>
                         <td class="p-4">
-                            <span class="rounded-full bg-green-100 px-3 py-1 text-green-800">
-                                Disponible
-                            </span>
+                            <span class="rounded-full bg-green-100 px-3 py-1 text-green-800">Disponible</span>
                         </td>
                         <td class="space-x-3 p-4">
-                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
-                                Editar
-                            </button>
-                            <button type="button" class="font-medium text-red-600 hover:underline">
-                                Eliminar
-                            </button>
+                            <a href="#actualizar-habitacion" class="font-medium text-[#1E3A8A] hover:underline">Editar</a>
+                            <a href="#actualizar-habitacion" class="font-medium text-red-600 hover:underline">Eliminar</a>
                         </td>
                     </tr>
 
                     <tr class="hover:bg-gray-50">
                         <td class="p-4">
-                            <img
-                                src="img/habitacionkingsize.avif"
-                                alt="Habitación con cama king size"
-                                class="h-16 w-24 rounded-lg object-cover">
+                            <img src="../img/habitacionkingsize.avif" alt="Habitación con cama king size" class="h-16 w-24 rounded-lg object-cover">
                         </td>
                         <td class="p-4 font-medium">205</td>
                         <td class="p-4">King size</td>
                         <td class="p-4">2 personas</td>
                         <td class="p-4">$2,400</td>
                         <td class="p-4">
-                            <span class="rounded-full bg-blue-100 px-3 py-1 text-blue-800">
-                                Ocupada
-                            </span>
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-blue-800">Ocupada</span>
                         </td>
                         <td class="space-x-3 p-4">
-                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
-                                Editar
-                            </button>
-                            <button type="button" class="font-medium text-red-600 hover:underline">
-                                Eliminar
-                            </button>
+                            <a href="#actualizar-habitacion" class="font-medium text-[#1E3A8A] hover:underline">Editar</a>
+                            <a href="#actualizar-habitacion" class="font-medium text-red-600 hover:underline">Eliminar</a>
                         </td>
                     </tr>
 
                     <tr class="hover:bg-gray-50">
                         <td class="p-4">
-                            <img
-                                src="img/habitacionmatrimonial.jpg"
-                                alt="Habitación matrimonial"
-                                class="h-16 w-24 rounded-lg object-cover">
+                            <img src="../img/habitacionmatrimonial.jpg" alt="Habitación matrimonial" class="h-16 w-24 rounded-lg object-cover">
                         </td>
                         <td class="p-4 font-medium">310</td>
                         <td class="p-4">Matrimonial</td>
                         <td class="p-4">2 personas</td>
                         <td class="p-4">$1,900</td>
                         <td class="p-4">
-                            <span class="rounded-full bg-red-100 px-3 py-1 text-red-700">
-                                Mantenimiento
-                            </span>
+                            <span class="rounded-full bg-red-100 px-3 py-1 text-red-700">Mantenimiento</span>
                         </td>
                         <td class="space-x-3 p-4">
-                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
-                                Editar
-                            </button>
-                            <button type="button" class="font-medium text-red-600 hover:underline">
-                                Eliminar
-                            </button>
+                            <a href="#actualizar-habitacion" class="font-medium text-[#1E3A8A] hover:underline">Editar</a>
+                            <a href="#actualizar-habitacion" class="font-medium text-red-600 hover:underline">Eliminar</a>
                         </td>
                     </tr>
                 </tbody>
@@ -204,9 +179,7 @@
                         <td class="p-4">Temporada alta</td>
                         <td class="p-4">$1,900 por noche</td>
                         <td class="p-4">
-                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
-                                Modificar
-                            </button>
+                            <a href="#actualizar-habitacion" class="font-medium text-[#1E3A8A] hover:underline">Modificar</a>
                         </td>
                     </tr>
                     <tr class="hover:bg-gray-50">
@@ -215,9 +188,7 @@
                         <td class="p-4">Temporada alta</td>
                         <td class="p-4">$2,900 por noche</td>
                         <td class="p-4">
-                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
-                                Modificar
-                            </button>
+                            <a href="#actualizar-habitacion" class="font-medium text-[#1E3A8A] hover:underline">Modificar</a>
                         </td>
                     </tr>
                     <tr class="hover:bg-gray-50">
@@ -226,28 +197,23 @@
                         <td class="p-4">Temporada alta</td>
                         <td class="p-4">$2,300 por noche</td>
                         <td class="p-4">
-                            <button type="button" class="font-medium text-[#1E3A8A] hover:underline">
-                                Modificar
-                            </button>
+                            <a href="#actualizar-habitacion" class="font-medium text-[#1E3A8A] hover:underline">Modificar</a>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <section class="rounded-xl border border-gray-200 bg-white p-6">
+        <section id="actualizar-habitacion" class="rounded-xl border border-gray-200 bg-white p-6">
             <h3 class="text-xl font-bold">Actualizar estado de habitación</h3>
             <p class="mt-1 text-sm text-gray-500">
                 Cambia la disponibilidad de una habitación.
             </p>
 
-            <form action="#" method="post" class="mt-5 grid gap-4 sm:grid-cols-3">
+            <form action="habitaciones.html" method="get" class="mt-5 grid gap-4 sm:grid-cols-3">
                 <div>
                     <label for="habitacion" class="block text-sm font-medium">Habitación</label>
-                    <select
-                        id="habitacion"
-                        name="habitacion"
-                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                    <select id="habitacion" name="habitacion" required class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                         <option value="">Seleccionar habitación</option>
                         <option value="101">Habitación 101</option>
                         <option value="205">Habitación 205</option>
@@ -257,10 +223,7 @@
 
                 <div>
                     <label for="estado" class="block text-sm font-medium">Nuevo estado</label>
-                    <select
-                        id="estado"
-                        name="estado"
-                        class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
+                    <select id="estado" name="estado" required class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                         <option value="">Seleccionar estado</option>
                         <option value="disponible">Disponible</option>
                         <option value="ocupada">Ocupada</option>
@@ -270,9 +233,7 @@
                 </div>
 
                 <div class="flex items-end">
-                    <button
-                        type="submit"
-                        class="w-full rounded-lg bg-[#1E3A8A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                    <button type="submit" class="w-full rounded-lg bg-[#1E3A8A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
                         Actualizar estado
                     </button>
                 </div>

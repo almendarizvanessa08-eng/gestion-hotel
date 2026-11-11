@@ -7,76 +7,70 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#E7E2D9] min-h-screen">
-    <!-- ENCABEZADO PRINCIPAL -->
+
     <header class="bg-[#0B1B34] text-white px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-4">
         <div>
             <h1 class="text-2xl font-bold tracking-wider">HOTEL AUREA</h1>
             <p class="text-[#A1B2D6] text-sm">Sistema de administración</p>
         </div>
+        <!-- Enlaces de navegación entre las pantallas del sistema -->
         <nav class="flex flex-wrap justify-center gap-5 text-sm">
-            <a href="#" class="hover:text-[#B48A5A]">Recepción</a>
-            <a href="#" class="hover:text-[#B48A5A]">Reservaciones</a>
-            <a href="#" class="hover:text-[#B48A5A]">Habitaciones</a>
-            <a href="#" class="hover:text-[#B48A5A]">Clientes</a>
-            <a href="#" class="hover:text-[#B48A5A]">Servicios</a>
-            <a href="#" class="text-[#B48A5A] font-semibold">Pagos</a>
-            <a href="#" class="hover:text-[#B48A5A]">Reportes</a>
+            <a href="recepcion.html" class="hover:text-[#B48A5A]">Recepción</a>
+            <a href="reservaciones.html" class="hover:text-[#B48A5A]">Reservaciones</a>
+            <a href="habitaciones.html" class="hover:text-[#B48A5A]">Habitaciones</a>
+            <a href="huespedes.html" class="hover:text-[#B48A5A]">Clientes</a>
+            <a href="servicios.html" class="hover:text-[#B48A5A]">Servicios</a>
+            <a href="pagos.html" class="text-[#B48A5A] font-semibold">Pagos</a>
+            <a href="reportes.html" class="hover:text-[#B48A5A]">Reportes</a>
+            <a href="operaciones.html" class="hover:text-[#B48A5A]">Operaciones</a>
+            <a href="administracion.html" class="hover:text-[#B48A5A]">Administración</a>
         </nav>
         <div class="bg-[#1E3A8A] px-4 py-2 rounded-lg text-sm">
             Administrador
         </div>
     </header>
-    <!-- CONTENIDO PRINCIPAL -->
+
     <main class="max-w-7xl mx-auto p-6">
+
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 mb-6">
             <div>
                 <h2 class="text-3xl font-bold text-[#0B1B34]">Gestión de pagos</h2>
-                <p class="text-gray-600 mt-1">Consulta y administra los pagos de los huéspedes.</p>
+                <p class="text-gray-600 mt-1">Los huéspedes realizan su pago al llegar a recepción.</p>
             </div>
-            <button class="bg-[#B48A5A] text-white px-5 py-3 rounded-lg hover:bg-[#987044]">
-                + Registrar pago
-            </button>
+            <a href="#registro-pago" class="bg-[#B48A5A] text-white px-5 py-3 rounded-lg hover:bg-[#987044]">
+                + Registrar pago en recepción
+            </a>
         </div>
-        <!-- INDICADORES DE PAGOS -->
+
         <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
             <div class="bg-white p-5 rounded-xl shadow">
                 <p class="text-gray-500 text-sm">Ingresos del mes</p>
                 <h3 class="text-2xl font-bold text-[#0B1B34] mt-2">$85,400</h3>
-                <p class="text-green-600 text-sm mt-2">Ingresos registrados</p>
+                <p class="text-green-600 text-sm mt-2">Pagos recibidos en recepción</p>
             </div>
             <div class="bg-white p-5 rounded-xl shadow">
                 <p class="text-gray-500 text-sm">Pagos completados</p>
                 <h3 class="text-2xl font-bold text-green-600 mt-2">86</h3>
-                <p class="text-gray-500 text-sm mt-2">Transacciones exitosas</p>
+                <p class="text-gray-500 text-sm mt-2">Huéspedes que ya pagaron</p>
             </div>
             <div class="bg-white p-5 rounded-xl shadow">
                 <p class="text-gray-500 text-sm">Pagos pendientes</p>
                 <h3 class="text-2xl font-bold text-yellow-600 mt-2">18</h3>
-                <p class="text-gray-500 text-sm mt-2">Por cobrar</p>
+                <p class="text-gray-500 text-sm mt-2">Por cobrar al llegar</p>
             </div>
             <div class="bg-white p-5 rounded-xl shadow">
                 <p class="text-gray-500 text-sm">Pagos reembolsados</p>
-                <h3 class="text-2xl font-bold text-red-600 mt-2">5</h3>
-                <p class="text-gray-500 text-sm mt-2">Devoluciones realizadas</p>
+                <h3 class="text-2xl font-bold text-red-600 mt-2">0</h3>
+                <p class="text-gray-500 text-sm mt-2">Sin devoluciones registradas</p>
             </div>
         </section>
-                <!-- FILTROS DE BUSQUEDA -->
+
         <section class="bg-white p-6 rounded-xl shadow mb-8">
             <h3 class="text-xl font-bold text-[#0B1B34] mb-5">Buscar pagos</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
                     <label class="block text-sm font-semibold mb-2">Nombre del huésped</label>
                     <input type="text" placeholder="Buscar huésped..." class="w-full border rounded-lg p-3 outline-none focus:ring-2 focus:ring-[#B48A5A]">
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2">Método de pago</label>
-                    <select class="w-full border rounded-lg p-3 bg-white">
-                        <option>Todos los métodos</option>
-                        <option>Tarjeta de crédito</option>
-                        <option>Tarjeta de débito</option>
-                        <option>Efectivo</option>
-                        <option>Transferencia</option>
-                    </select>
                 </div>
                 <div>
                     <label class="block text-sm font-semibold mb-2">Estado del pago</label>
@@ -84,7 +78,6 @@
                         <option>Todos los estados</option>
                         <option>Completado</option>
                         <option>Pendiente</option>
-                        <option>Reembolsado</option>
                     </select>
                 </div>
                 <div>
@@ -93,21 +86,22 @@
                 </div>
             </div>
             <div class="flex justify-end gap-3 mt-5">
-                <button class="border border-gray-300 px-5 py-2 rounded-lg hover:bg-gray-100">Limpiar</button>
-                <button class="bg-[#1E3A8A] text-white px-5 py-2 rounded-lg hover:bg-[#0B1B34]">Buscar</button>
+                <button type="reset" class="border border-gray-300 px-5 py-2 rounded-lg hover:bg-gray-100">Limpiar</button>
+                <button type="button" class="bg-[#1E3A8A] text-white px-5 py-2 rounded-lg hover:bg-[#0B1B34]">Buscar</button>
             </div>
         </section>
-        <!-- HISTORIAL DE PAGOS -->
+
         <section class="bg-white p-6 rounded-xl shadow mb-8">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 mb-5">
                 <div>
                     <h3 class="text-xl font-bold text-[#0B1B34]">Historial de pagos</h3>
-                    <p class="text-gray-500 text-sm">Registro de las transacciones realizadas.</p>
+                    <p class="text-gray-500 text-sm">Registro de pagos realizados al llegar a recepción.</p>
                 </div>
-                <button class="border border-[#B48A5A] text-[#987044] px-4 py-2 rounded-lg hover:bg-[#E7E2D9]">
+                <button type="button" class="border border-[#B48A5A] text-[#987044] px-4 py-2 rounded-lg hover:bg-[#E7E2D9]">
                     Exportar historial
                 </button>
             </div>
+
             <div class="overflow-x-auto">
                 <table class="w-full text-sm text-left">
                     <thead class="bg-[#0B1B34] text-white">
@@ -116,7 +110,7 @@
                             <th class="p-3">Huésped</th>
                             <th class="p-3">Reservación</th>
                             <th class="p-3">Fecha</th>
-                            <th class="p-3">Método</th>
+                            <th class="p-3">Lugar de pago</th>
                             <th class="p-3">Importe</th>
                             <th class="p-3">Estado</th>
                             <th class="p-3">Acciones</th>
@@ -128,118 +122,109 @@
                             <td class="p-3">Carlos Mendoza</td>
                             <td class="p-3">RES-1045</td>
                             <td class="p-3">02/11/2026</td>
-                            <td class="p-3">Tarjeta</td>
+                            <td class="p-3">Recepción</td>
                             <td class="p-3 font-semibold">$3,500</td>
                             <td class="p-3"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">Completado</span></td>
-                            <td class="p-3"><button class="text-[#1E3A8A] hover:underline">Consultar</button></td>
+                            <td class="p-3"><a href="recepcion.html" class="text-[#1E3A8A] hover:underline">Consultar</a></td>
                         </tr>
                         <tr class="border-b hover:bg-gray-50">
                             <td class="p-3 font-semibold">PAG-1024</td>
                             <td class="p-3">Mariana López</td>
                             <td class="p-3">RES-1046</td>
                             <td class="p-3">02/11/2026</td>
-                            <td class="p-3">Efectivo</td>
+                            <td class="p-3">Recepción</td>
                             <td class="p-3 font-semibold">$2,800</td>
                             <td class="p-3"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">Completado</span></td>
-                            <td class="p-3"><button class="text-[#1E3A8A] hover:underline">Consultar</button></td>
+                            <td class="p-3"><a href="recepcion.html" class="text-[#1E3A8A] hover:underline">Consultar</a></td>
                         </tr>
                         <tr class="border-b hover:bg-gray-50">
                             <td class="p-3 font-semibold">PAG-1023</td>
                             <td class="p-3">Roberto Sánchez</td>
                             <td class="p-3">RES-1047</td>
                             <td class="p-3">01/11/2026</td>
-                            <td class="p-3">Transferencia</td>
+                            <td class="p-3">Recepción</td>
                             <td class="p-3 font-semibold">$4,200</td>
                             <td class="p-3"><span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">Pendiente</span></td>
-                            <td class="p-3"><button class="text-[#1E3A8A] hover:underline">Consultar</button></td>
+                            <td class="p-3"><a href="#registro-pago" class="text-[#1E3A8A] hover:underline">Registrar</a></td>
                         </tr>
                         <tr class="border-b hover:bg-gray-50">
                             <td class="p-3 font-semibold">PAG-1022</td>
                             <td class="p-3">Andrea Torres</td>
                             <td class="p-3">RES-1048</td>
                             <td class="p-3">31/10/2026</td>
-                            <td class="p-3">Tarjeta</td>
+                            <td class="p-3">Recepción</td>
                             <td class="p-3 font-semibold">$1,900</td>
-                            <td class="p-3"><span class="bg-red-100 text-red-700 px-3 py-1 rounded-full">Reembolsado</span></td>
-                            <td class="p-3"><button class="text-[#1E3A8A] hover:underline">Consultar</button></td>
+                            <td class="p-3"><span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">Pendiente</span></td>
+                            <td class="p-3"><a href="#registro-pago" class="text-[#1E3A8A] hover:underline">Registrar</a></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
-                <!-- REGISTRO DE NUEVO PAGO -->
-        <section class="bg-white p-6 rounded-xl shadow mb-8">
-            <h3 class="text-xl font-bold text-[#0B1B34] mb-2">Registrar nuevo pago</h3>
-            <p class="text-gray-500 text-sm mb-5">Captura la información del pago realizado por el huésped.</p>
+
+        <section id="registro-pago" class="bg-white p-6 rounded-xl shadow mb-8">
+            <h3 class="text-xl font-bold text-[#0B1B34] mb-2">Registrar pago en recepción</h3>
+            <p class="text-gray-500 text-sm mb-5">El pago se registra cuando el huésped llega al hotel y se presenta en recepción.</p>
+
+            <div class="mb-5 rounded-lg border border-[#B48A5A] bg-[#E7E2D9] p-4">
+                <p class="font-semibold text-[#0B1B34]">Modalidad de pago</p>
+                <p class="mt-1 text-sm text-gray-700">Pago presencial al llegar a recepción. No se aceptan pagos anticipados ni transferencias.</p>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Nombre del huésped</label>
-                    <input type="text" placeholder="Nombre completo" class="w-full border rounded-lg p-3">
+                    <label for="huesped" class="block text-sm font-semibold mb-2">Nombre del huésped</label>
+                    <input id="huesped" type="text" placeholder="Nombre completo" class="w-full border rounded-lg p-3">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Folio de reservación</label>
-                    <input type="text" placeholder="Ej. RES-1049" class="w-full border rounded-lg p-3">
+                    <label for="reservacion" class="block text-sm font-semibold mb-2">Folio de reservación</label>
+                    <input id="reservacion" type="text" placeholder="Ej. RES-1049" class="w-full border rounded-lg p-3">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Importe del pago</label>
-                    <input type="number" placeholder="$0.00" class="w-full border rounded-lg p-3">
+                    <label for="importe" class="block text-sm font-semibold mb-2">Importe del pago</label>
+                    <input id="importe" type="number" min="0" placeholder="$0.00" class="w-full border rounded-lg p-3">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Método de pago</label>
-                    <select class="w-full border rounded-lg p-3 bg-white">
-                        <option>Seleccionar método</option>
-                        <option>Efectivo</option>
-                        <option>Tarjeta de crédito</option>
-                        <option>Tarjeta de débito</option>
-                        <option>Transferencia bancaria</option>
-                    </select>
+                    <label for="fecha" class="block text-sm font-semibold mb-2">Fecha de llegada y pago</label>
+                    <input id="fecha" type="date" class="w-full border rounded-lg p-3">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Fecha del pago</label>
-                    <input type="date" class="w-full border rounded-lg p-3">
+                    <label for="lugar" class="block text-sm font-semibold mb-2">Lugar de pago</label>
+                    <input id="lugar" type="text" value="Recepción del hotel" readonly class="w-full border rounded-lg p-3 bg-gray-100">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Estado</label>
-                    <select class="w-full border rounded-lg p-3 bg-white">
-                        <option>Completado</option>
+                    <label for="estado" class="block text-sm font-semibold mb-2">Estado del pago</label>
+                    <select id="estado" class="w-full border rounded-lg p-3 bg-white">
                         <option>Pendiente</option>
+                        <option>Completado</option>
                     </select>
                 </div>
                 <div class="md:col-span-2 lg:col-span-3">
-                    <label class="block text-sm font-semibold mb-2">Observaciones</label>
-                    <textarea rows="3" placeholder="Agregar detalles del pago..." class="w-full border rounded-lg p-3"></textarea>
+                    <label for="observaciones" class="block text-sm font-semibold mb-2">Observaciones</label>
+                    <textarea id="observaciones" rows="3" placeholder="Agregar detalles del pago..." class="w-full border rounded-lg p-3"></textarea>
                 </div>
             </div>
+
             <div class="flex justify-end gap-3 mt-5">
-                <button class="border border-gray-300 px-5 py-2 rounded-lg hover:bg-gray-100">Cancelar</button>
-                <button class="bg-[#1E3A8A] text-white px-6 py-2 rounded-lg hover:bg-[#0B1B34]">Guardar pago</button>
+                <a href="pagos.html" class="border border-gray-300 px-5 py-2 rounded-lg hover:bg-gray-100">Cancelar</a>
+                <button type="button" class="bg-[#1E3A8A] text-white px-6 py-2 rounded-lg hover:bg-[#0B1B34]">Guardar pago</button>
             </div>
         </section>
-        <!-- RESUMEN DE METODOS DE PAGO -->
+
         <section class="bg-white p-6 rounded-xl shadow mb-8">
-            <h3 class="text-xl font-bold text-[#0B1B34] mb-5">Resumen por método de pago</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div class="border rounded-lg p-5">
-                    <p class="text-gray-500 text-sm">Tarjetas bancarias</p>
-                    <h4 class="text-2xl font-bold text-[#1E3A8A] mt-2">$48,500</h4>
-                    <p class="text-sm text-gray-500 mt-2">57% de los ingresos</p>
-                </div>
-                <div class="border rounded-lg p-5">
-                    <p class="text-gray-500 text-sm">Efectivo</p>
-                    <h4 class="text-2xl font-bold text-[#1E3A8A] mt-2">$22,400</h4>
-                    <p class="text-sm text-gray-500 mt-2">26% de los ingresos</p>
-                </div>
-                <div class="border rounded-lg p-5">
-                    <p class="text-gray-500 text-sm">Transferencias</p>
-                    <h4 class="text-2xl font-bold text-[#1E3A8A] mt-2">$14,500</h4>
-                    <p class="text-sm text-gray-500 mt-2">17% de los ingresos</p>
-                </div>
+            <h3 class="text-xl font-bold text-[#0B1B34] mb-5">Modalidad de pago del hotel</h3>
+            <div class="border rounded-lg p-5">
+                <p class="text-gray-500 text-sm">Única modalidad disponible</p>
+                <h4 class="text-2xl font-bold text-[#1E3A8A] mt-2">Pago en recepción</h4>
+                <p class="text-sm text-gray-500 mt-2">El huésped realiza el pago al llegar al hotel, directamente con el personal de recepción.</p>
             </div>
         </section>
+
     </main>
-    <!-- PIE DE PAGINA -->
+
     <footer class="bg-[#0B1B34] text-[#A1B2D6] text-center py-5 text-sm">
         © 2026 Hotel Aurea. Sistema de administración.
     </footer>
+
 </body>
 </html>

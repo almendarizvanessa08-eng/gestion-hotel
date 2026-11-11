@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,19 +9,26 @@
 </head>
 <body class="bg-[#E7E2D9] text-[#0B1B34]">
 
-    <!-- ENCABEZADO PRINCIPAL DEL HOTEL -->
     <header class="bg-[#0B1B34] text-white">
-        <nav class="mx-auto flex max-w-6xl items-center justify-between p-4">
+        <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 p-4">
             <div>
                 <h1 class="text-xl font-bold">HOTEL AUREA</h1>
                 <p class="text-sm text-[#A1B2D6]">Sistema de administración</p>
             </div>
-            <div class="hidden gap-6 text-sm sm:flex">
-                <a href="#" class="hover:text-[#B48A5A]">Recepción</a>
-                <a href="#" class="text-[#B48A5A]">Reservaciones</a>
-                <a href="#" class="hover:text-[#B48A5A]">Servicios</a>
-                <a href="#" class="hover:text-[#B48A5A]">Habitaciones</a>
+
+            <!-- Enlaces de navegación entre las pantallas del sistema -->
+            <div class="hidden flex-wrap gap-5 text-sm lg:flex">
+                <a href="recepcion.html" class="hover:text-[#B48A5A]">Recepción</a>
+                <a href="reservaciones.html" class="font-semibold text-[#B48A5A]">Reservaciones</a>
+                <a href="servicios.html" class="hover:text-[#B48A5A]">Servicios</a>
+                <a href="habitaciones.html" class="hover:text-[#B48A5A]">Habitaciones</a>
+                <a href="huespedes.html" class="hover:text-[#B48A5A]">Clientes</a>
+                <a href="pagos.html" class="hover:text-[#B48A5A]">Pagos</a>
+                <a href="reportes.html" class="hover:text-[#B48A5A]">Reportes</a>
+                <a href="operaciones.html" class="hover:text-[#B48A5A]">Operaciones</a>
+                <a href="administracion.html" class="hover:text-[#B48A5A]">Administración</a>
             </div>
+
             <div class="text-right">
                 <p class="text-sm font-semibold">Administrador</p>
                 <p class="text-xs text-[#A1B2D6]">Sesión activa</p>
@@ -28,10 +36,8 @@
         </nav>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL DE RESERVACIONES -->
     <main class="mx-auto max-w-6xl space-y-6 p-4 py-8">
 
-        <!-- TÍTULO Y BOTÓN PARA CREAR RESERVACIÓN -->
         <section class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
             <div>
                 <h2 class="text-3xl font-bold">Gestión de reservaciones</h2>
@@ -39,36 +45,31 @@
                     Administra las reservaciones, disponibilidad y estancias de los huéspedes.
                 </p>
             </div>
-            <button class="rounded-lg bg-[#B48A5A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+            <a href="#nueva-reservacion" class="rounded-lg bg-[#B48A5A] px-5 py-3 text-center font-semibold text-white hover:bg-[#0B1B34]">
                 + Nueva reservación
-            </button>
+            </a>
         </section>
 
-        <!-- INDICADORES GENERALES DE RESERVACIONES -->
         <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
-            <!-- TOTAL DE RESERVACIONES -->
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Total de reservaciones</p>
                 <p class="mt-2 text-3xl font-bold text-[#1E3A8A]">124</p>
                 <p class="mt-1 text-xs text-gray-500">Registros del hotel</p>
             </article>
 
-            <!-- RESERVACIONES CONFIRMADAS -->
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Confirmadas</p>
                 <p class="mt-2 text-3xl font-bold text-green-600">86</p>
                 <p class="mt-1 text-xs text-gray-500">Reservaciones activas</p>
             </article>
 
-            <!-- RESERVACIONES PENDIENTES -->
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Pendientes</p>
                 <p class="mt-2 text-3xl font-bold text-[#B48A5A]">18</p>
                 <p class="mt-1 text-xs text-gray-500">Por confirmar</p>
             </article>
 
-            <!-- RESERVACIONES CANCELADAS -->
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Canceladas</p>
                 <p class="mt-2 text-3xl font-bold text-red-600">20</p>
@@ -76,7 +77,7 @@
             </article>
 
         </section>
-                <!-- FILTROS PARA BUSCAR RESERVACIONES -->
+
         <section class="rounded-xl border border-gray-200 bg-white p-6">
             <h3 class="text-xl font-bold">Buscar reservaciones</h3>
             <p class="mt-1 text-sm text-gray-500">
@@ -85,28 +86,24 @@
 
             <form class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
-                <!-- BÚSQUEDA POR NOMBRE DEL HUÉSPED -->
                 <div>
                     <label for="huesped" class="block text-sm font-medium">Nombre del huésped</label>
                     <input id="huesped" type="text" placeholder="Buscar huésped"
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- FILTRO POR FECHA DE ENTRADA -->
                 <div>
                     <label for="entrada" class="block text-sm font-medium">Fecha de entrada</label>
                     <input id="entrada" type="date"
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- FILTRO POR FECHA DE SALIDA -->
                 <div>
                     <label for="salida" class="block text-sm font-medium">Fecha de salida</label>
                     <input id="salida" type="date"
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- FILTRO POR ESTADO -->
                 <div>
                     <label for="estado" class="block text-sm font-medium">Estado</label>
                     <select id="estado"
@@ -118,7 +115,6 @@
                     </select>
                 </div>
 
-                <!-- BOTÓN PARA APLICAR LOS FILTROS -->
                 <div class="text-center sm:col-span-2 lg:col-span-4 sm:text-right">
                     <button type="button"
                         class="rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34]">
@@ -129,7 +125,6 @@
             </form>
         </section>
 
-        <!-- TABLA GENERAL DE RESERVACIONES -->
         <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
 
             <div class="flex flex-col justify-between gap-3 p-5 sm:flex-row sm:items-center">
@@ -142,7 +137,7 @@
                 </span>
             </div>
 
-            <table class="w-full text-left text-sm">
+            <table class="w-full min-w-[850px] text-left text-sm">
                 <thead class="border-y border-gray-200 bg-gray-50">
                     <tr>
                         <th class="p-4 font-medium">Folio</th>
@@ -157,7 +152,6 @@
 
                 <tbody class="divide-y divide-gray-100">
 
-                    <!-- PRIMERA RESERVACIÓN CONFIRMADA -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">RES-1045</td>
                         <td class="p-4">Carlos Ramírez</td>
@@ -169,13 +163,12 @@
                         </td>
                         <td class="p-4">
                             <div class="flex gap-3">
-                                <button class="text-[#1E3A8A] hover:underline">Editar</button>
-                                <button class="text-red-600 hover:underline">Cancelar</button>
+                                <a href="#nueva-reservacion" class="text-[#1E3A8A] hover:underline">Editar</a>
+                                <a href="#nueva-reservacion" class="text-red-600 hover:underline">Cancelar</a>
                             </div>
                         </td>
                     </tr>
 
-                    <!-- SEGUNDA RESERVACIÓN PENDIENTE -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">RES-1046</td>
                         <td class="p-4">María López</td>
@@ -187,13 +180,12 @@
                         </td>
                         <td class="p-4">
                             <div class="flex gap-3">
-                                <button class="text-[#1E3A8A] hover:underline">Editar</button>
-                                <button class="text-red-600 hover:underline">Cancelar</button>
+                                <a href="#nueva-reservacion" class="text-[#1E3A8A] hover:underline">Editar</a>
+                                <a href="#nueva-reservacion" class="text-red-600 hover:underline">Cancelar</a>
                             </div>
                         </td>
                     </tr>
 
-                    <!-- TERCERA RESERVACIÓN CANCELADA -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">RES-1047</td>
                         <td class="p-4">Juan Torres</td>
@@ -204,11 +196,10 @@
                             <span class="rounded-full bg-red-100 px-3 py-1 text-red-700">Cancelada</span>
                         </td>
                         <td class="p-4">
-                            <button class="text-[#1E3A8A] hover:underline">Consultar</button>
+                            <a href="#nueva-reservacion" class="text-[#1E3A8A] hover:underline">Consultar</a>
                         </td>
                     </tr>
 
-                    <!-- CUARTA RESERVACIÓN CONFIRMADA -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">RES-1048</td>
                         <td class="p-4">Ana Martínez</td>
@@ -220,8 +211,8 @@
                         </td>
                         <td class="p-4">
                             <div class="flex gap-3">
-                                <button class="text-[#1E3A8A] hover:underline">Editar</button>
-                                <button class="text-red-600 hover:underline">Cancelar</button>
+                                <a href="#nueva-reservacion" class="text-[#1E3A8A] hover:underline">Editar</a>
+                                <a href="#nueva-reservacion" class="text-red-600 hover:underline">Cancelar</a>
                             </div>
                         </td>
                     </tr>
@@ -229,8 +220,8 @@
                 </tbody>
             </table>
         </section>
-                <!-- FORMULARIO PARA REGISTRAR UNA NUEVA RESERVACIÓN -->
-        <section class="rounded-xl border border-gray-200 bg-white p-6">
+
+        <section id="nueva-reservacion" class="rounded-xl border border-gray-200 bg-white p-6">
             <h3 class="text-xl font-bold">Registrar nueva reservación</h3>
             <p class="mt-1 text-sm text-gray-500">
                 Captura los datos del huésped y los detalles de su estancia.
@@ -238,52 +229,45 @@
 
             <form class="mt-5 grid gap-4 sm:grid-cols-2">
 
-                <!-- NOMBRE DEL HUÉSPED -->
                 <div>
                     <label for="nombre" class="block text-sm font-medium">Nombre completo</label>
-                    <input id="nombre" type="text" placeholder="Nombre del huésped"
+                    <input id="nombre" type="text" placeholder="Nombre del huésped" required
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- CORREO DEL HUÉSPED -->
                 <div>
                     <label for="correo" class="block text-sm font-medium">Correo electrónico</label>
-                    <input id="correo" type="email" placeholder="correo@ejemplo.com"
+                    <input id="correo" type="email" placeholder="correo@ejemplo.com" required
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- TELÉFONO DEL HUÉSPED -->
                 <div>
                     <label for="telefono" class="block text-sm font-medium">Teléfono</label>
                     <input id="telefono" type="tel" placeholder="Número de teléfono"
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- NÚMERO DE HUÉSPEDES -->
                 <div>
                     <label for="personas" class="block text-sm font-medium">Número de huéspedes</label>
-                    <input id="personas" type="number" min="1" placeholder="Ej. 2"
+                    <input id="personas" type="number" min="1" placeholder="Ej. 2" required
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- FECHA DE ENTRADA -->
                 <div>
                     <label for="fechaEntrada" class="block text-sm font-medium">Fecha de entrada</label>
-                    <input id="fechaEntrada" type="date"
+                    <input id="fechaEntrada" type="date" required
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- FECHA DE SALIDA -->
                 <div>
                     <label for="fechaSalida" class="block text-sm font-medium">Fecha de salida</label>
-                    <input id="fechaSalida" type="date"
+                    <input id="fechaSalida" type="date" required
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- SELECCIÓN DE HABITACIÓN -->
                 <div>
                     <label for="habitacion" class="block text-sm font-medium">Tipo de habitación</label>
-                    <select id="habitacion"
+                    <select id="habitacion" required
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                         <option value="">Seleccionar habitación</option>
                         <option>Estándar</option>
@@ -293,7 +277,6 @@
                     </select>
                 </div>
 
-                <!-- SELECCIÓN DE SERVICIOS ADICIONALES -->
                 <div>
                     <label for="servicio" class="block text-sm font-medium">Servicio adicional</label>
                     <select id="servicio"
@@ -305,14 +288,12 @@
                     </select>
                 </div>
 
-                <!-- OBSERVACIONES DE LA RESERVACIÓN -->
                 <div class="sm:col-span-2">
                     <label for="observaciones" class="block text-sm font-medium">Observaciones</label>
                     <textarea id="observaciones" rows="3" placeholder="Escribe alguna solicitud especial..."
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none"></textarea>
                 </div>
 
-                <!-- BOTÓN PARA REGISTRAR LA RESERVACIÓN -->
                 <div class="text-center sm:col-span-2 sm:text-right">
                     <button type="button"
                         class="rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34]">
@@ -323,17 +304,13 @@
             </form>
         </section>
 
-        <!-- CONTROL DE DISPONIBILIDAD DE HABITACIONES -->
         <section class="grid gap-6 sm:grid-cols-2">
 
-            <!-- RESUMEN DE DISPONIBILIDAD -->
             <article class="rounded-xl border border-gray-200 bg-white p-6">
                 <h3 class="text-xl font-bold">Disponibilidad de habitaciones</h3>
                 <p class="mt-1 text-sm text-gray-500">Estado general del alojamiento.</p>
 
                 <div class="mt-5 space-y-4">
-
-                    <!-- HABITACIONES DISPONIBLES -->
                     <div>
                         <div class="mb-1 flex justify-between text-sm">
                             <span>Disponibles</span>
@@ -344,7 +321,6 @@
                         </div>
                     </div>
 
-                    <!-- HABITACIONES OCUPADAS -->
                     <div>
                         <div class="mb-1 flex justify-between text-sm">
                             <span>Ocupadas</span>
@@ -355,7 +331,6 @@
                         </div>
                     </div>
 
-                    <!-- HABITACIONES BLOQUEADAS -->
                     <div>
                         <div class="mb-1 flex justify-between text-sm">
                             <span>Bloqueadas</span>
@@ -365,18 +340,18 @@
                             <div class="h-3 w-[10%] rounded-full bg-red-500"></div>
                         </div>
                     </div>
-
                 </div>
+
+                <a href="habitaciones.html" class="mt-5 inline-block font-medium text-[#1E3A8A] hover:underline">
+                    Consultar habitaciones
+                </a>
             </article>
 
-            <!-- CONTROL DE TEMPORADAS -->
             <article class="rounded-xl border border-gray-200 bg-white p-6">
                 <h3 class="text-xl font-bold">Control de temporadas</h3>
                 <p class="mt-1 text-sm text-gray-500">Consulta los periodos y tarifas especiales.</p>
 
                 <div class="mt-4 space-y-3">
-
-                    <!-- TEMPORADA ALTA -->
                     <div class="flex items-center justify-between rounded-lg bg-[#E7E2D9] p-4">
                         <div>
                             <p class="font-semibold">Temporada alta</p>
@@ -385,7 +360,6 @@
                         <span class="font-bold text-[#B48A5A]">+25%</span>
                     </div>
 
-                    <!-- TEMPORADA REGULAR -->
                     <div class="flex items-center justify-between rounded-lg bg-gray-50 p-4">
                         <div>
                             <p class="font-semibold">Temporada regular</p>
@@ -394,7 +368,6 @@
                         <span class="font-bold text-[#1E3A8A]">Normal</span>
                     </div>
 
-                    <!-- TEMPORADA BAJA -->
                     <div class="flex items-center justify-between rounded-lg bg-gray-50 p-4">
                         <div>
                             <p class="font-semibold">Temporada baja</p>
@@ -402,18 +375,15 @@
                         </div>
                         <span class="font-bold text-green-600">-15%</span>
                     </div>
-
                 </div>
 
-                <!-- BOTÓN PARA ADMINISTRAR TEMPORADAS -->
-                <button class="mt-4 w-full rounded-lg border border-[#1E3A8A] px-4 py-2 text-[#1E3A8A] hover:bg-[#1E3A8A] hover:text-white">
+                <a href="habitaciones.html" class="mt-4 block w-full rounded-lg border border-[#1E3A8A] px-4 py-2 text-center text-[#1E3A8A] hover:bg-[#1E3A8A] hover:text-white">
                     Administrar temporadas
-                </button>
+                </a>
             </article>
 
         </section>
 
-        <!-- INFORMACIÓN SOBRE COMPROBANTES -->
         <section class="rounded-xl border border-gray-200 bg-white p-6">
             <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
                 <div>
@@ -422,12 +392,11 @@
                         Consulta los folios y comprobantes generados para los huéspedes.
                     </p>
                 </div>
-                <button class="rounded-lg bg-[#B48A5A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+                <a href="pagos.html" class="rounded-lg bg-[#B48A5A] px-5 py-3 text-center font-semibold text-white hover:bg-[#0B1B34]">
                     Consultar comprobantes
-                </button>
+                </a>
             </div>
 
-            <!-- ÚLTIMO COMPROBANTE GENERADO -->
             <div class="mt-4 rounded-lg bg-[#E7E2D9] p-4">
                 <p class="text-sm text-gray-500">Último comprobante generado</p>
                 <p class="mt-1 font-bold">RES-1045</p>
@@ -436,7 +405,6 @@
             </div>
         </section>
 
-        <!-- PIE DE PÁGINA DEL SISTEMA -->
         <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">
             <p>Hotel Aurea | Sistema de administración de reservaciones</p>
             <p class="mt-1">Control de disponibilidad y atención a huéspedes</p>

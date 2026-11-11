@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,17 +9,23 @@
 </head>
 <body class="bg-[#E7E2D9] text-[#0B1B34]">
 
-    <!-- ENCABEZADO PRINCIPAL DEL HOTEL -->
     <header class="bg-[#0B1B34] text-white">
         <nav class="mx-auto flex max-w-6xl items-center justify-between p-4">
             <div>
                 <h1 class="text-xl font-bold">HOTEL AUREA</h1>
                 <p class="text-sm text-[#A1B2D6]">Panel de administración</p>
             </div>
+            <!-- Enlaces de navegación entre las pantallas del sistema -->
             <div class="hidden gap-6 text-sm sm:flex">
-                <a href="#" class="text-[#B48A5A]">Recepción</a>
-                <a href="#" class="hover:text-[#B48A5A]">Reservaciones</a>
-                <a href="#" class="hover:text-[#B48A5A]">Habitaciones</a>
+                <a href="recepcion.html" class="text-[#B48A5A]">Recepción</a>
+                <a href="reservaciones.html" class="hover:text-[#B48A5A]">Reservaciones</a>
+                <a href="habitaciones.html" class="hover:text-[#B48A5A]">Habitaciones</a>
+                <a href="huespedes.html" class="hover:text-[#B48A5A]">Clientes</a>
+                <a href="servicios.html" class="hover:text-[#B48A5A]">Servicios</a>
+                <a href="pagos.html" class="hover:text-[#B48A5A]">Pagos</a>
+                <a href="reportes.html" class="hover:text-[#B48A5A]">Reportes</a>
+                <a href="operaciones.html" class="hover:text-[#B48A5A]">Operaciones</a>
+                <a href="administracion.html" class="hover:text-[#B48A5A]">Administración</a>
             </div>
             <div class="text-right">
                 <p class="text-sm font-semibold">Administrador</p>
@@ -27,10 +34,8 @@
         </nav>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL DE RECEPCIÓN -->
     <main class="mx-auto max-w-6xl space-y-6 p-4 py-8">
 
-        <!-- TÍTULO Y DESCRIPCIÓN DE LA PANTALLA -->
         <section class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
             <div>
                 <h2 class="text-3xl font-bold">Panel de recepción</h2>
@@ -38,36 +43,31 @@
                     Control de huéspedes, habitaciones, llegadas y salidas.
                 </p>
             </div>
-            <button class="rounded-lg bg-[#B48A5A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34]">
+            <a href="#registro-huesped" class="rounded-lg bg-[#B48A5A] px-5 py-3 font-semibold text-white hover:bg-[#0B1B34] text-center">
                 + Registrar huésped
-            </button>
+            </a>
         </section>
 
-        <!-- INDICADORES GENERALES DE RECEPCIÓN -->
         <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
-            <!-- TOTAL DE HABITACIONES OCUPADAS -->
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Habitaciones ocupadas</p>
                 <p class="mt-2 text-3xl font-bold text-[#1E3A8A]">32</p>
                 <p class="mt-1 text-xs text-gray-500">De 40 habitaciones</p>
             </article>
 
-            <!-- HUÉSPEDES REGISTRADOS -->
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Huéspedes actuales</p>
                 <p class="mt-2 text-3xl font-bold text-[#B48A5A]">58</p>
                 <p class="mt-1 text-xs text-gray-500">Registrados en el hotel</p>
             </article>
 
-            <!-- LLEGADAS PROGRAMADAS -->
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Llegadas de hoy</p>
                 <p class="mt-2 text-3xl font-bold text-green-600">8</p>
                 <p class="mt-1 text-xs text-gray-500">Check-in pendiente</p>
             </article>
 
-            <!-- SALIDAS PROGRAMADAS -->
             <article class="rounded-xl border border-gray-200 bg-white p-5">
                 <p class="text-sm text-gray-500">Salidas de hoy</p>
                 <p class="mt-2 text-3xl font-bold text-red-600">5</p>
@@ -75,7 +75,7 @@
             </article>
 
         </section>
-                <!-- TABLA DE LLEGADAS PROGRAMADAS -->
+
         <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
             <div class="flex items-center justify-between p-5">
                 <div>
@@ -96,7 +96,6 @@
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100">
-                    <!-- PRIMER HUÉSPED PENDIENTE -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">Carlos Ramírez</td>
                         <td class="p-4">205</td>
@@ -105,12 +104,11 @@
                             <span class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-800">Pendiente</span>
                         </td>
                         <td class="p-4">
-                            <button class="rounded-lg bg-[#1E3A8A] px-3 py-2 text-white hover:bg-[#0B1B34]">
+                            <a href="reservaciones.html" class="rounded-lg bg-[#1E3A8A] px-3 py-2 text-white hover:bg-[#0B1B34]">
                                 Check-in
-                            </button>
+                            </a>
                         </td>
                     </tr>
-                    <!-- SEGUNDO HUÉSPED PENDIENTE -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">María López</td>
                         <td class="p-4">101</td>
@@ -119,12 +117,11 @@
                             <span class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-800">Pendiente</span>
                         </td>
                         <td class="p-4">
-                            <button class="rounded-lg bg-[#1E3A8A] px-3 py-2 text-white hover:bg-[#0B1B34]">
+                            <a href="reservaciones.html" class="rounded-lg bg-[#1E3A8A] px-3 py-2 text-white hover:bg-[#0B1B34]">
                                 Check-in
-                            </button>
+                            </a>
                         </td>
                     </tr>
-                    <!-- TERCER HUÉSPED PENDIENTE -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">Juan Torres</td>
                         <td class="p-4">310</td>
@@ -133,56 +130,45 @@
                             <span class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-800">Pendiente</span>
                         </td>
                         <td class="p-4">
-                            <button class="rounded-lg bg-[#1E3A8A] px-3 py-2 text-white hover:bg-[#0B1B34]">
+                            <a href="reservaciones.html" class="rounded-lg bg-[#1E3A8A] px-3 py-2 text-white hover:bg-[#0B1B34]">
                                 Check-in
-                            </button>
+                            </a>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <!-- ESTADO ACTUAL DE LAS HABITACIONES -->
         <section class="rounded-xl border border-gray-200 bg-white p-5">
             <div class="mb-4 flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
                 <div>
                     <h3 class="text-xl font-bold">Estado de habitaciones</h3>
                     <p class="text-sm text-gray-500">Consulta rápida de disponibilidad</p>
                 </div>
-                <!-- FILTRO PARA CONSULTAR HABITACIONES -->
-                <select class="rounded-lg border border-gray-300 p-2">
-                    <option>Todas las habitaciones</option>
-                    <option>Disponibles</option>
-                    <option>Ocupadas</option>
-                    <option>En limpieza</option>
-                    <option>En mantenimiento</option>
-                </select>
+                <a href="habitaciones.html" class="rounded-lg bg-[#1E3A8A] px-4 py-2 text-center text-sm font-semibold text-white hover:bg-[#0B1B34]">
+                    Ver habitaciones
+                </a>
             </div>
 
-            <!-- TARJETAS DE ESTADO DE HABITACIONES -->
             <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <!-- HABITACIÓN DISPONIBLE -->
                 <article class="rounded-lg border border-green-200 bg-green-50 p-4">
                     <p class="text-sm text-gray-500">Habitación 101</p>
                     <p class="mt-2 font-bold text-green-700">Disponible</p>
                     <p class="mt-1 text-xs text-gray-500">Lista para recibir huéspedes</p>
                 </article>
 
-                <!-- HABITACIÓN OCUPADA -->
                 <article class="rounded-lg border border-blue-200 bg-blue-50 p-4">
                     <p class="text-sm text-gray-500">Habitación 205</p>
                     <p class="mt-2 font-bold text-blue-800">Ocupada</p>
                     <p class="mt-1 text-xs text-gray-500">Huésped registrado</p>
                 </article>
 
-                <!-- HABITACIÓN EN LIMPIEZA -->
                 <article class="rounded-lg border border-yellow-200 bg-yellow-50 p-4">
                     <p class="text-sm text-gray-500">Habitación 208</p>
                     <p class="mt-2 font-bold text-yellow-800">En limpieza</p>
                     <p class="mt-1 text-xs text-gray-500">Pendiente de liberación</p>
                 </article>
 
-                <!-- HABITACIÓN EN MANTENIMIENTO -->
                 <article class="rounded-lg border border-red-200 bg-red-50 p-4">
                     <p class="text-sm text-gray-500">Habitación 402</p>
                     <p class="mt-2 font-bold text-red-700">Mantenimiento</p>
@@ -191,7 +177,6 @@
             </div>
         </section>
 
-        <!-- TABLA DE SALIDAS PROGRAMADAS -->
         <section class="overflow-x-auto rounded-xl border border-gray-200 bg-white">
             <div class="p-5">
                 <h3 class="text-xl font-bold">Salidas de hoy</h3>
@@ -209,7 +194,6 @@
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100">
-                    <!-- PRIMERA SALIDA PROGRAMADA -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">Ana Martínez</td>
                         <td class="p-4">203</td>
@@ -218,12 +202,11 @@
                             <span class="rounded-full bg-orange-100 px-3 py-1 text-orange-800">Pendiente</span>
                         </td>
                         <td class="p-4">
-                            <button class="rounded-lg bg-[#B48A5A] px-3 py-2 text-white hover:bg-[#0B1B34]">
+                            <a href="reservaciones.html" class="rounded-lg bg-[#B48A5A] px-3 py-2 text-white hover:bg-[#0B1B34]">
                                 Check-out
-                            </button>
+                            </a>
                         </td>
                     </tr>
-                    <!-- SEGUNDA SALIDA PROGRAMADA -->
                     <tr class="hover:bg-gray-50">
                         <td class="p-4 font-medium">Pedro Sánchez</td>
                         <td class="p-4">304</td>
@@ -232,68 +215,73 @@
                             <span class="rounded-full bg-orange-100 px-3 py-1 text-orange-800">Pendiente</span>
                         </td>
                         <td class="p-4">
-                            <button class="rounded-lg bg-[#B48A5A] px-3 py-2 text-white hover:bg-[#0B1B34]">
+                            <a href="reservaciones.html" class="rounded-lg bg-[#B48A5A] px-3 py-2 text-white hover:bg-[#0B1B34]">
                                 Check-out
-                            </button>
+                            </a>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </section>
-                <!-- FORMULARIO PARA REGISTRAR UN HUÉSPED -->
-        <section class="rounded-xl border border-gray-200 bg-white p-6">
+
+        <section id="registro-huesped" class="rounded-xl border border-gray-200 bg-white p-6">
             <h3 class="text-xl font-bold">Registrar nuevo huésped</h3>
             <p class="mt-1 text-sm text-gray-500">
                 Ingresa los datos del huésped para completar su registro.
             </p>
 
-            <form class="mt-5 grid gap-4 sm:grid-cols-2">
+            <form action="huespedes.html" method="get" class="mt-5 grid gap-4 sm:grid-cols-2">
 
-                <!-- CAMPO PARA EL NOMBRE DEL HUÉSPED -->
                 <div>
                     <label for="nombre" class="block text-sm font-medium">Nombre completo</label>
                     <input
                         id="nombre"
+                        name="nombre"
                         type="text"
                         placeholder="Nombre del huésped"
+                        required
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- CAMPO PARA EL DOCUMENTO DE IDENTIDAD -->
                 <div>
                     <label for="documento" class="block text-sm font-medium">Documento de identidad</label>
                     <input
                         id="documento"
+                        name="documento"
                         type="text"
                         placeholder="Número de identificación"
+                        required
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- CAMPO PARA EL TELÉFONO -->
                 <div>
                     <label for="telefono" class="block text-sm font-medium">Teléfono</label>
                     <input
                         id="telefono"
+                        name="telefono"
                         type="tel"
                         placeholder="Número de teléfono"
+                        required
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- CAMPO PARA EL CORREO ELECTRÓNICO -->
                 <div>
                     <label for="correo" class="block text-sm font-medium">Correo electrónico</label>
                     <input
                         id="correo"
+                        name="correo"
                         type="email"
                         placeholder="correo@ejemplo.com"
+                        required
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- SELECCIÓN DE HABITACIÓN -->
                 <div>
                     <label for="habitacion" class="block text-sm font-medium">Habitación</label>
                     <select
                         id="habitacion"
+                        name="habitacion"
+                        required
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                         <option value="">Seleccionar habitación</option>
                         <option value="101">Habitación 101</option>
@@ -302,19 +290,19 @@
                     </select>
                 </div>
 
-                <!-- SELECCIÓN DE FECHA DE ENTRADA -->
                 <div>
                     <label for="fecha" class="block text-sm font-medium">Fecha de entrada</label>
                     <input
                         id="fecha"
+                        name="fecha"
                         type="date"
+                        required
                         class="mt-1 w-full rounded-lg border border-gray-300 p-3 focus:border-[#1E3A8A] focus:outline-none">
                 </div>
 
-                <!-- BOTÓN PARA GUARDAR EL REGISTRO -->
                 <div class="text-center sm:col-span-2 sm:text-right">
                     <button
-                        type="button"
+                        type="submit"
                         class="rounded-lg bg-[#1E3A8A] px-6 py-3 font-semibold text-white hover:bg-[#0B1B34]">
                         Guardar huésped
                     </button>
@@ -323,7 +311,6 @@
             </form>
         </section>
 
-        <!-- PIE DE PÁGINA DEL SISTEMA -->
         <footer class="border-t border-gray-300 py-5 text-center text-sm text-gray-500">
             <p>Hotel Aurea | Sistema de administración y recepción</p>
             <p class="mt-1">Panel de control de huéspedes y habitaciones</p>
